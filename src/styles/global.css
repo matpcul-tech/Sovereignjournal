@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap");
+
+:root {
+  --navy: #07101f;
+  --navy-2: #0c1a30;
+  --card: #0f1f38;
+  --line: #1c2f4d;
+  --gold: #d4a843;
+  --gold-soft: #e6c46e;
+  --teal: #00d4b8;
+  --text: #e8e4dd;
+  --muted: #9aa6ba;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Outfit", system-ui, sans-serif;
+  --measure: 64ch;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--navy); color: var(--text); font-family: var(--sans); font-weight: 300; line-height: 1.65; -webkit-text-size-adjust: 100%; }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
+a { color: var(--gold-soft); text-decoration: none; }
+a:hover, a:focus-visible { color: var(--teal); }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+
+.wrap { width: min(100% - 2.5rem, 46rem); margin: 0 auto; }
+
+.top { border-bottom: 1px solid var(--line); background: var(--navy-2); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 0; }
+.brand { font-family: var(--serif); font-weight: 700; font-size: 1.2rem; color: var(--gold); letter-spacing: 0.01em; }
+.shield { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; font-weight: 500; color: var(--teal); letter-spacing: 0.06em; }
+.shield .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 0 rgba(0, 212, 184, 0.7); animation: pulse 2.2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 212, 184, 0.6); } 70% { box-shadow: 0 0 0 9px rgba(0, 212, 184, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 212, 184, 0); } }
+@media (prefers-reduced-motion: reduce) { .shield .dot { animation: none; } }
+
+main { flex: 1; padding: 2.5rem 0 4rem; }
+
+.hero h1 { font-family: var(--serif); font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; margin: 0 0 0.75rem; color: var(--text); font-weight: 600; }
+.hero p { margin: 0; color: var(--muted); max-width: var(--measure); font-size: 1.05rem; }
+.hero .rule { width: 4rem; height: 2px; background: var(--gold); margin: 1.75rem 0 2.5rem; }
+
+.entry { display: block; padding: 1.5rem 0; border-top: 1px solid var(--line); color: inherit; }
+.entry:last-child { border-bottom: 1px solid var(--line); }
+.entry time { font-size: 0.82rem; color: var(--gold); font-weight: 500; }
+.entry h2 { font-family: var(--serif); font-size: 1.45rem; margin: 0.35rem 0 0.4rem; line-height: 1.25; font-weight: 600; color: var(--text); }
+.entry p { margin: 0; color: var(--muted); max-width: var(--measure); }
+.entry:hover h2 { color: var(--gold-soft); }
+
+.post header { margin-bottom: 2rem; }
+.post header time { font-size: 0.85rem; color: var(--gold); font-weight: 500; }
+.post header h1 { font-family: var(--serif); font-size: clamp(1.9rem, 5.5vw, 2.6rem); line-height: 1.15; margin: 0.4rem 0 0.8rem; font-weight: 600; }
+.post header .lede { font-size: 1.1rem; color: var(--muted); margin: 0; max-width: var(--measure); }
+.post header .byline { margin-top: 1.25rem; font-size: 0.85rem; color: var(--muted); }
+.post header .byline strong { color: var(--text); font-weight: 500; }
+
+.prose { font-size: 1.08rem; max-width: var(--measure); }
+.prose p { margin: 0 0 1.35rem; }
+.prose h2 { font-family: var(--serif); font-size: 1.5rem; margin: 2.25rem 0 0.75rem; font-weight: 600; line-height: 1.25; }
+.prose h3 { font-family: var(--serif); font-size: 1.2rem; margin: 1.75rem 0 0.5rem; font-weight: 600; }
+.prose blockquote { margin: 1.5rem 0; padding: 0.25rem 0 0.25rem 1.1rem; border-left: 2px solid var(--gold); color: var(--gold-soft); font-family: var(--serif); font-style: italic; }
+.prose ul, .prose ol { padding-left: 1.3rem; }
+.prose li { margin-bottom: 0.4rem; }
+.prose strong { font-weight: 500; color: #fff; }
+.prose code { font-family: ui-monospace, monospace; font-size: 0.9em; background: var(--card); padding: 0.1em 0.35em; border-radius: 3px; }
+
+.tags { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tags span { font-size: 0.78rem; color: var(--teal); border: 1px solid var(--line); border-radius: 999px; padding: 0.2rem 0.7rem; }
+
+.share { margin-top: 2.5rem; padding: 1.25rem; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+.share p { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.95rem; }
+.share p:last-child { margin: 0; }
+
+.back { display: inline-block; margin-bottom: 1.5rem; font-size: 0.9rem; }
+
+footer { border-top: 1px solid var(--line); background: var(--navy-2); }
+footer .wrap { padding: 1.5rem 0; font-size: 0.85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; }

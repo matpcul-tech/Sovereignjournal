@@ -1,0 +1,66 @@
+name: Daily journal
+
+on:
+  schedule:
+    # 11:00 UTC = 6:00 AM Central (CDT). Adjust for CST in winter if it matters.
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-journal
+  cancel-in-progress: false
+
+jobs:
+  write-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Write today's entry
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL || 'claude-sonnet-4-6' }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: npm run write
+
+      - name: Commit and push (this deploys the blog on Vercel)
+        run: |
+          git config user.name "sovereign-journal-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/content/posts state.json
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit."
+            echo "posted=false" >> "$GITHUB_ENV"
+          else
+            git commit -m "journal: $(date -u +%F)"
+            git push
+            echo "posted=true" >> "$GITHUB_ENV"
+          fi
+
+      - name: Wait for Vercel to deploy the new post
+        if: env.posted == 'true'
+        run: sleep 120
+
+      - name: Post to LinkedIn
+        if: env.posted == 'true'
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+        run: npm run post:linkedin
+
+      - name: Keep today's LinkedIn text as an artifact
+        if: env.posted == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: linkedin-${{ github.run_id }}
+          path: out/
