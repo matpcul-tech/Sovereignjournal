@@ -1,0 +1,41 @@
+---
+import "../styles/global.css";
+import config from "../../config.json";
+const { title, description, canonical } = Astro.props;
+const pageTitle = title ? `${title} | ${config.siteTitle}` : config.siteTitle;
+const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description ?? "Daily writing on sovereign AI infrastructure and Adaptive Inclusive Leadership Theory."} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="alternate" type="application/rss+xml" title={config.siteTitle} href={`${site}/rss.xml`} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description ?? ""} />
+    <meta property="og:type" content="article" />
+    <meta name="theme-color" content="#07101f" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="/">{config.siteTitle}</a>
+        <span class="shield" aria-label="Sovereign infrastructure"><span class="dot"></span>SOVEREIGN</span>
+      </div>
+    </header>
+    <main>
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+    <footer>
+      <div class="wrap">
+        <span>{config.author}. {config.authorLine}</span>
+        <a href="/rss.xml">RSS</a>
+      </div>
+    </footer>
+  </body>
+</html>

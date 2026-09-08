@@ -1,0 +1,15 @@
+{
+  "note": "The writer walks this list top to bottom, one per day, then starts over. Edit freely. 'research' lists files under research/ to load for that theme.",
+  "themes": [
+    { "slug": "inclusive-adaptive-capacity", "title": "Inclusive Adaptive Capacity", "angle": "Why the leaders who adapt fastest are the ones who widened the circle first", "research": ["ailt-core.md"] },
+    { "slug": "sovereignty-tension", "title": "Sovereignty Tension", "angle": "The pull between controlling your own infrastructure and moving at the speed of borrowed infrastructure", "research": ["ailt-core.md", "sovereign-shield-thesis.md"] },
+    { "slug": "participatory-sensemaking", "title": "Participatory Sensemaking", "angle": "Decisions made with the room hold longer than decisions made for the room", "research": ["ailt-core.md"] },
+    { "slug": "one-node-at-a-time", "title": "One Node at a Time", "angle": "Building the next hyperscaler from a single container on tribal land", "research": ["sovereign-shield-thesis.md"] },
+    { "slug": "cost-of-consistency", "title": "Cost of Consistency", "angle": "Every rule you refuse to bend costs something; know the bill before you pay it", "research": ["ailt-core.md", "sovereign-shield-thesis.md"] },
+    { "slug": "psychological-safety-as-mediator", "title": "Psychological Safety as Mediator", "angle": "Safety is not the goal, it is the channel every other construct travels through", "research": ["ailt-core.md"] },
+    { "slug": "the-data-moat", "title": "The Data Moat Is Local", "angle": "PHI that never leaves the node, and why that is a business model and not just a compliance posture", "research": ["sovereign-shield-thesis.md"] },
+    { "slug": "equity-centered-flexibility", "title": "Equity-Centered Flexibility", "angle": "Flexibility that does not center equity just redistributes advantage to whoever was already ahead", "research": ["ailt-core.md"] },
+    { "slug": "building-from-a-phone", "title": "Building From a Phone", "angle": "What solo building with AI teaches about leadership theory in practice", "research": ["sovereign-shield-thesis.md", "ailt-core.md"] },
+    { "slug": "governance-before-compute", "title": "Governance Before Compute", "angle": "Why the leadership layer sits under the infrastructure layer in the Sovereign Shield architecture", "research": ["ailt-core.md", "sovereign-shield-thesis.md"] }
+  ]
+}
