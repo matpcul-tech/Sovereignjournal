@@ -61,6 +61,14 @@ jobs:
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
         run: npm run post:linkedin
 
+      - name: Post to Facebook
+        if: env.posted == 'true'
+        env:
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: npm run post:facebook
+
       - name: Keep today's LinkedIn text as an artifact
         if: env.posted == 'true'
         uses: actions/upload-artifact@v7
