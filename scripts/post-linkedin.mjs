@@ -51,7 +51,7 @@ const res = await fetch("https://api.linkedin.com/rest/posts", {
     Authorization: `Bearer ${token}`,
     "Content-Type": "application/json",
     "X-Restli-Protocol-Version": "2.0.0",
-    "LinkedIn-Version": process.env.LINKEDIN_VERSION || "202506"
+    "LinkedIn-Version": process.env.LINKEDIN_VERSION || "202608"
   },
   body: JSON.stringify(body)
 });
