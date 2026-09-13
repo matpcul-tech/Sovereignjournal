@@ -1,0 +1,17 @@
+---
+const { post, featured = false } = Astro.props;
+const fmt = (d: Date) => d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+const mins = Math.max(1, Math.round(post.body.trim().split(/\s+/).length / 220));
+---
+<a class:list={["entry", { featured }]} href={`/posts/${post.id}/`}>
+  <img src={`/og/${post.id}.png`} alt="" width="1200" height="630" />
+  <div>
+    <div class="meta">
+      <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time>
+      <span>{mins} min read</span>
+      {post.data.theme && <span>{post.data.theme}</span>}
+    </div>
+    <h2>{post.data.title}</h2>
+    <p>{post.data.description}</p>
+  </div>
+</a>
