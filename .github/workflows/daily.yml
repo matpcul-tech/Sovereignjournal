@@ -69,6 +69,15 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL }}
         run: npm run post:facebook
 
+      - name: Post to X
+        if: env.posted == 'true'
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: npm run post:x
+
       - name: Keep today's LinkedIn text as an artifact
         if: env.posted == 'true'
         uses: actions/upload-artifact@v7

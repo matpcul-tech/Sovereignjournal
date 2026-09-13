@@ -10,7 +10,8 @@
     "write": "node scripts/write.mjs",
     "og": "python3 scripts/og.py",
     "post:linkedin": "node scripts/post-linkedin.mjs",
-    "post:facebook": "node scripts/post-facebook.mjs"
+    "post:facebook": "node scripts/post-facebook.mjs",
+    "post:x": "node scripts/post-x.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.50.0",

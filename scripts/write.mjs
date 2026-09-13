@@ -39,7 +39,7 @@ const recentTitles = state.written.slice(-14).map((w) => `- ${w.date}: ${w.title
 
 const system = `You write a daily journal entry for ${config.author}. ${config.authorLine}
 
-The journal covers sovereign AI infrastructure and Adaptive Inclusive Leadership Theory (AILT). It publishes to a blog, to LinkedIn, and to Facebook.
+The journal covers sovereign AI infrastructure and Adaptive Inclusive Leadership Theory (AILT). It publishes to a blog, to LinkedIn, to Facebook, and to X.
 
 Follow the voice guide exactly. It is the law of this journal.
 
