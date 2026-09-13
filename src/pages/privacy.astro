@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+import config from "../../config.json";
+---
+<Base title="Privacy Policy" description="How The Sovereign Journal handles data: no accounts, no cookies, no tracking scripts.">
+  <p class="kicker">Policy</p>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="lede">This is a static journal. It collects as little as a website can.</p>
+  <div class="rule"></div>
+  <div class="prose">
+    <p>Effective September 13, 2026.</p>
+    <h2>What this site collects</h2>
+    <p>Nothing, directly. There are no accounts, no comment forms, no newsletters, no cookies set by this site, and no analytics or tracking scripts. The site is a set of static pages. The search box runs entirely in your browser and sends nothing anywhere.</p>
+    <h2>Hosting</h2>
+    <p>The site is served by Vercel. Like any web host, Vercel's infrastructure processes standard request data (your IP address, browser type, and the pages requested) to deliver the pages and keep the service secure. That processing is governed by <a href="https://vercel.com/legal/privacy-policy">Vercel's privacy policy</a>. This journal does not receive or store that data.</p>
+    <h2>Outbound links and syndication</h2>
+    <p>Entries link out to other sites, and cuts of each entry are shared to LinkedIn and can be imported into Medium. Once you follow a link to those platforms, their privacy policies apply, not this one. Reading by RSS shares nothing with this site beyond the fetch your reader makes.</p>
+    <h2>Changes</h2>
+    <p>If the site ever starts collecting something (a newsletter, for instance), this page will say so before it happens, with a new effective date at the top.</p>
+    <h2>Contact</h2>
+    <p>Questions about this policy can go through the contact details at <a href="https://www.sovereignshieldtechnologies.com">sovereignshieldtechnologies.com</a>. The journal is written and published by {config.author}.</p>
+  </div>
+</Base>
