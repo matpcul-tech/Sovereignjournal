@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 const { title, description, canonical, ogImage } = Astro.props;
 const pageTitle = title ? `${title} | ${config.siteTitle}` : config.siteTitle;
 const site = Astro.site?.toString().replace(/\/$/, "") ?? "https://sovereignjournal.vercel.app";
-const og = ogImage || `${site}/og/default.png`;
+const og = ogImage || `${site}/og/default.jpg`;
 const searchIndex = (await getCollection("posts"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .map((p) => ({
@@ -43,7 +43,7 @@ const nav = [
     {canonical && <meta property="og:url" content={canonical} />}
     <meta property="og:image" content={og} />
     <meta property="og:image:alt" content={title ? `${title} — ${config.siteTitle}` : config.siteTitle} />
-    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
     <meta name="twitter:card" content="summary_large_image" />

@@ -28,7 +28,7 @@ const related = all
   .slice(0, 3)
   .map((x) => x.p);
 ---
-<Base title={post.data.title} description={post.data.description} canonical={url} ogImage={`${site}/og/${post.id}.png`}>
+<Base title={post.data.title} description={post.data.description} canonical={url} ogImage={`${site}/og/${post.id}.jpg`}>
   <article class="post">
     <a class="back" href="/">All entries</a>
     <header>
@@ -39,6 +39,7 @@ const related = all
       </div>
       <h1>{post.data.title}</h1>
       <p class="lede">{post.data.description}</p>
+      <img class="lead" src={`/og/${post.id}.jpg`} alt="" width="1200" height="627" />
       <p class="byline"><strong>{config.author}</strong>. {config.authorLine}</p>
     </header>
     <div class="prose"><Content /></div>

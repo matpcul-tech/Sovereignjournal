@@ -39,7 +39,7 @@ main { flex: 1; padding: 2.5rem 0 4rem; }
 .hero .rule { width: 4rem; height: 2px; background: var(--gold); margin: 1.75rem 0 2.5rem; }
 
 .entry { display: grid; grid-template-columns: 1fr; gap: 0.85rem; align-items: start; padding: 1.5rem 0; border-top: 1px solid var(--line); color: inherit; }
-.entry img { width: 100%; height: auto; aspect-ratio: 1200 / 627; object-fit: contain; object-position: center; display: block; border-radius: 8px; border: 1px solid var(--line); background: var(--navy-2); }
+.entry img { width: 100%; height: auto; aspect-ratio: 1200 / 627; object-fit: cover; object-position: center; display: block; border-radius: 8px; border: 1px solid var(--line); background: var(--navy-2); }
 .entry:last-child { border-bottom: 1px solid var(--line); }
 .entry time { font-size: 0.82rem; color: var(--gold); font-weight: 500; }
 .entry h2 { font-family: var(--serif); font-size: 1.45rem; margin: 0.35rem 0 0.4rem; line-height: 1.25; font-weight: 600; color: var(--text); }
@@ -50,6 +50,7 @@ main { flex: 1; padding: 2.5rem 0 4rem; }
 .post header time { font-size: 0.85rem; color: var(--gold); font-weight: 500; }
 .post header h1 { font-family: var(--serif); font-size: clamp(1.9rem, 5.5vw, 2.6rem); line-height: 1.15; margin: 0.4rem 0 0.8rem; font-weight: 600; }
 .post header .lede { font-size: 1.1rem; color: var(--muted); margin: 0; max-width: var(--measure); }
+.post header .lead { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 627; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); margin: 1.4rem 0 0; background: var(--navy-2); }
 .post header .byline { margin-top: 1.25rem; font-size: 0.85rem; color: var(--muted); }
 .post header .byline strong { color: var(--text); font-weight: 500; }
 

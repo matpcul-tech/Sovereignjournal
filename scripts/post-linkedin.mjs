@@ -35,9 +35,9 @@ const headers = {
 const escapeCommentary = (s) => s.replace(/[()<>\[\]{}*_~|@]/g, (c) => "\\" + c);
 
 async function uploadThumbnail(slug) {
-  const file = path.join(root, "public", "og", `${slug}.png`);
+  const file = path.join(root, "public", "og", `${slug}.jpg`);
   if (!fs.existsSync(file)) {
-    console.warn(`No OG card at ${file}. Article will post without a thumbnail.`);
+    console.warn(`No photograph at ${file}. Article will post without a thumbnail.`);
     return null;
   }
   const init = await fetch("https://api.linkedin.com/rest/images?action=initializeUpload", {
@@ -59,7 +59,7 @@ async function uploadThumbnail(slug) {
   }
   const put = await fetch(uploadUrl, {
     method: "PUT",
-    headers: { Authorization: `Bearer ${token}`, "Content-Type": "image/png" },
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "image/jpeg" },
     body: fs.readFileSync(file)
   });
   if (!put.ok) {
