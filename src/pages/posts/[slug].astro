@@ -47,11 +47,6 @@ const related = all
         {post.data.tags.map((t) => <a href={`/tag/${t}/`}>{t}</a>)}
       </div>
     )}
-    <div class="share">
-      <p>Republish this entry on Medium: open Medium, choose Import a story, and paste this address.</p>
-      <p><code id="share-url">{url}</code></p>
-      <button type="button" class="copy" id="copy-url">Copy address</button>
-    </div>
     {related.length > 0 && (
       <section class="related">
         <h2>Related</h2>
@@ -78,17 +73,4 @@ const related = all
       )}
     </nav>
   </article>
-  <script is:inline>
-    const btn = document.getElementById("copy-url");
-    const urlEl = document.getElementById("share-url");
-    if (btn && urlEl) {
-      btn.addEventListener("click", async () => {
-        try {
-          await navigator.clipboard.writeText(urlEl.textContent || "");
-          btn.textContent = "Copied";
-          setTimeout(() => { btn.textContent = "Copy address"; }, 1600);
-        } catch {}
-      });
-    }
-  </script>
 </Base>

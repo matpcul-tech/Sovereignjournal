@@ -39,7 +39,7 @@ const recentTitles = state.written.slice(-14).map((w) => `- ${w.date}: ${w.title
 
 const system = `You write a daily journal entry for ${config.author}. ${config.authorLine}
 
-The journal covers sovereign AI infrastructure and Adaptive Inclusive Leadership Theory (AILT). It publishes to a blog, to Medium, and to LinkedIn.
+The journal covers sovereign AI infrastructure and Adaptive Inclusive Leadership Theory (AILT). It publishes to a blog and to LinkedIn.
 
 Follow the voice guide exactly. It is the law of this journal.
 
@@ -60,7 +60,7 @@ Return only a JSON object with these keys and nothing else, no markdown fences:
   "description": "one sentence, under 160 characters, for the blog listing and meta tag",
   "tags": ["three", "to", "five", "lowercase", "tags"],
   "body": "the full piece in markdown, 700 to 1100 words, using ## subheads only if the piece genuinely has sections. No H1. No title repeated at the top.",
-  "linkedin": "a standalone LinkedIn post, under ${config.linkedInMaxChars} characters, plain text, no markdown, no hashtags in the first line, first line is the hook, short paragraphs separated by blank lines, ends with a line inviting the reader to the full piece (the URL is appended automatically, do not include one), then up to four hashtags on the last line"
+  "linkedin": "a standalone LinkedIn post, under ${config.linkedInMaxChars} characters, plain text, no markdown, no hashtags in the first line, first line is the hook, short paragraphs separated by blank lines, no URL (the article card carries the link), then up to four hashtags on the last line"
 }`;
 
 const user = `Today's theme: ${theme.title}
