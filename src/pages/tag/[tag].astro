@@ -1,0 +1,31 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+  const tags = [...new Set(posts.flatMap((p) => p.data.tags))];
+  return tags.map((tag) => ({
+    params: { tag },
+    props: {
+      tag,
+      posts: posts.filter((p) => p.data.tags.includes(tag)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+const fmt = (d: Date) => d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+---
+<Base title={`#${tag}`} description={`Entries tagged ${tag}.`}>
+  <a class="back" href="/archive/">Archive</a>
+  <h1 class="page-title">{tag}</h1>
+  <p class="muted">{posts.length} {posts.length === 1 ? "entry" : "entries"}</p>
+  {posts.map((p) => (
+    <a class="entry" href={`/posts/${p.id}/`}>
+      <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
+      <h2>{p.data.title}</h2>
+      <p>{p.data.description}</p>
+    </a>
+  ))}
+</Base>

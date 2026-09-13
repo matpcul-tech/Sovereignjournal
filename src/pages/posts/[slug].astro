@@ -4,30 +4,91 @@ import config from "../../../config.json";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("posts");
-  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+  const posts = (await getCollection("posts")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return posts.map((post, i) => ({
+    params: { slug: post.id },
+    props: { post, newer: posts[i - 1], older: posts[i + 1], all: posts },
+  }));
 }
 
-const { post } = Astro.props;
+const { post, newer, older, all } = Astro.props;
 const { Content } = await render(post);
 const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
 const url = `${site}/posts/${post.id}/`;
 const fmt = (d: Date) => d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+const mins = Math.max(1, Math.round(post.body.trim().split(/\s+/).length / 220));
+const related = all
+  .filter((p) => p.id !== post.id)
+  .map((p) => ({
+    p,
+    score: (p.data.tags || []).filter((t) => (post.data.tags || []).includes(t)).length + (p.data.theme && p.data.theme === post.data.theme ? 2 : 0),
+  }))
+  .filter((x) => x.score > 0)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 3)
+  .map((x) => x.p);
 ---
 <Base title={post.data.title} description={post.data.description} canonical={url}>
   <article class="post">
     <a class="back" href="/">All entries</a>
     <header>
-      <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time>
+      <div class="meta">
+        <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time>
+        <span>{mins} min read</span>
+        {post.data.theme && <span>{post.data.theme}</span>}
+      </div>
       <h1>{post.data.title}</h1>
       <p class="lede">{post.data.description}</p>
       <p class="byline"><strong>{config.author}</strong>. {config.authorLine}</p>
     </header>
     <div class="prose"><Content /></div>
-    {post.data.tags.length > 0 && <div class="tags">{post.data.tags.map((t) => <span>{t}</span>)}</div>}
+    {post.data.tags.length > 0 && (
+      <div class="tags">
+        {post.data.tags.map((t) => <a href={`/tag/${t}/`}>{t}</a>)}
+      </div>
+    )}
     <div class="share">
       <p>Republish this entry on Medium: open Medium, choose Import a story, and paste this address.</p>
-      <p><code>{url}</code></p>
+      <p><code id="share-url">{url}</code></p>
+      <button type="button" class="copy" id="copy-url">Copy address</button>
     </div>
+    {related.length > 0 && (
+      <section class="related">
+        <h2>Related</h2>
+        {related.map((p) => (
+          <a class="entry" href={`/posts/${p.id}/`}>
+            <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
+            <h3>{p.data.title}</h3>
+          </a>
+        ))}
+      </section>
+    )}
+    <nav class="adjacent" aria-label="Adjacent entries">
+      {older ? (
+        <a href={`/posts/${older.id}/`}>
+          <span>Previous</span>
+          {older.data.title}
+        </a>
+      ) : <span></span>}
+      {newer && (
+        <a class="next" href={`/posts/${newer.id}/`}>
+          <span>Next</span>
+          {newer.data.title}
+        </a>
+      )}
+    </nav>
   </article>
+  <script is:inline>
+    const btn = document.getElementById("copy-url");
+    const urlEl = document.getElementById("share-url");
+    if (btn && urlEl) {
+      btn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(urlEl.textContent || "");
+          btn.textContent = "Copied";
+          setTimeout(() => { btn.textContent = "Copy address"; }, 1600);
+        } catch {}
+      });
+    }
+  </script>
 </Base>

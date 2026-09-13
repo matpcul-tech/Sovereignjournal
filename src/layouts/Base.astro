@@ -1,9 +1,27 @@
 ---
 import "../styles/global.css";
 import config from "../../config.json";
+import { getCollection } from "astro:content";
 const { title, description, canonical } = Astro.props;
 const pageTitle = title ? `${title} | ${config.siteTitle}` : config.siteTitle;
 const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
+const searchIndex = (await getCollection("posts"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .map((p) => ({
+    href: `/posts/${p.id}/`,
+    title: p.data.title,
+    description: p.data.description,
+    theme: p.data.theme ?? "",
+    date: p.data.date.toISOString().slice(0, 10),
+  }));
+const path = Astro.url.pathname;
+const nav = [
+  { href: "/", label: "Journal", active: path === "/" || path.startsWith("/posts/") },
+  { href: "/archive/", label: "Archive", active: path.startsWith("/archive") || path.startsWith("/tag/") },
+  { href: "/theory/", label: "Theory", active: path.startsWith("/theory") },
+  { href: "/stack/", label: "Stack", active: path.startsWith("/stack") },
+  { href: "/about/", label: "About", active: path.startsWith("/about") },
+];
 ---
 <!doctype html>
 <html lang="en">
@@ -12,7 +30,9 @@ const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description ?? "Daily writing on sovereign AI infrastructure and Adaptive Inclusive Leadership Theory."} />
+    <meta name="author" content={config.author} />
     {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate" type="application/rss+xml" title={config.siteTitle} href={`${site}/rss.xml`} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description ?? ""} />
@@ -20,13 +40,32 @@ const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
     <meta name="theme-color" content="#07101f" />
   </head>
   <body>
+    <a class="skip" href="#content">Skip to content</a>
     <header class="top">
-      <div class="wrap">
+      <div class="wrap top-inner">
         <a class="brand" href="/">{config.siteTitle}</a>
-        <span class="shield" aria-label="Sovereign infrastructure"><span class="dot"></span>SOVEREIGN</span>
+        <nav class="nav" aria-label="Primary">
+          {nav.map((item) => (
+            <a href={item.href} class:list={[{ active: item.active }]}>{item.label}</a>
+          ))}
+        </nav>
+        <div class="top-actions">
+          <button type="button" class="icon-btn" id="search-open" aria-label="Search entries">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          </button>
+          <span class="shield" aria-label="Sovereign infrastructure"><span class="dot"></span>SOVEREIGN</span>
+          <button type="button" class="icon-btn menu-btn" id="menu-toggle" aria-expanded="false" aria-label="Open menu">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
       </div>
+      <nav class="mobile-nav" id="mobile-nav" hidden aria-label="Mobile">
+        {nav.map((item) => (
+          <a href={item.href} class:list={[{ active: item.active }]}>{item.label}</a>
+        ))}
+      </nav>
     </header>
-    <main>
+    <main id="content">
       <div class="wrap">
         <slot />
       </div>
@@ -34,8 +73,68 @@ const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
     <footer>
       <div class="wrap">
         <span>{config.author}. {config.authorLine}</span>
-        <a href="/rss.xml">RSS</a>
+        <div class="foot-links">
+          <a href="/archive/">Archive</a>
+          <a href="/theory/">AILT</a>
+          <a href="/about/">About</a>
+          <a href="/rss.xml">RSS</a>
+        </div>
       </div>
     </footer>
+
+    <div class="search-overlay" id="search-overlay" hidden>
+      <div class="search-dialog" role="dialog" aria-modal="true" aria-label="Search the journal">
+        <input id="search-input" type="search" placeholder="Search entries, themes, ideas" autocomplete="off" />
+        <ul id="search-results"></ul>
+      </div>
+    </div>
+    <script is:inline define:vars={{ searchIndex }}>
+      const overlay = document.getElementById("search-overlay");
+      const input = document.getElementById("search-input");
+      const results = document.getElementById("search-results");
+      const openBtn = document.getElementById("search-open");
+      const menuBtn = document.getElementById("menu-toggle");
+      const mobileNav = document.getElementById("mobile-nav");
+      const fmt = (iso) => new Date(iso + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+      function render(q) {
+        const needle = (q || "").trim().toLowerCase();
+        const hits = searchIndex.filter((p) => {
+          if (!needle) return true;
+          return `${p.title} ${p.description} ${p.theme}`.toLowerCase().includes(needle);
+        }).slice(0, 8);
+        results.innerHTML = hits.length
+          ? hits.map((p) => `<li><a href="${p.href}"><strong>${p.title}</strong><span>${fmt(p.date)} · ${p.theme}</span></a></li>`).join("")
+          : `<li class="empty">No entries match.</li>`;
+      }
+      function openSearch() {
+        overlay.hidden = false;
+        render("");
+        input.value = "";
+        input.focus();
+      }
+      function closeSearch() { overlay.hidden = true; }
+      openBtn.addEventListener("click", openSearch);
+      overlay.addEventListener("click", (e) => { if (e.target === overlay) closeSearch(); });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeSearch();
+        const t = e.target;
+        const typing = t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA");
+        if (!typing && (e.key === "/" || ((e.metaKey || e.ctrlKey) && e.key === "k"))) {
+          e.preventDefault();
+          openSearch();
+        }
+      });
+      input.addEventListener("input", () => render(input.value));
+      menuBtn.addEventListener("click", () => {
+        const open = mobileNav.hasAttribute("hidden") === false;
+        if (open) {
+          mobileNav.hidden = true;
+          menuBtn.setAttribute("aria-expanded", "false");
+        } else {
+          mobileNav.hidden = false;
+          menuBtn.setAttribute("aria-expanded", "true");
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,1 +1,11 @@
-{ "nextTheme": 0, "written": [] }
+{
+  "nextTheme": 4,
+  "written": [
+    { "date": "2026-09-08", "slug": "2026-09-08-welcome", "title": "Why this journal exists", "theme": "Welcome" },
+    { "date": "2026-09-09", "slug": "2026-09-09-inclusive-adaptive-capacity", "title": "Widen the circle before you change the system", "theme": "Inclusive Adaptive Capacity" },
+    { "date": "2026-09-10", "slug": "2026-09-10-sovereignty-tension", "title": "Borrowed speed always invoices late", "theme": "Sovereignty Tension" },
+    { "date": "2026-09-11", "slug": "2026-09-11-participatory-sensemaking", "title": "Decisions made with the room hold", "theme": "Participatory Sensemaking" },
+    { "date": "2026-09-12", "slug": "2026-09-12-one-node-at-a-time", "title": "One container is a hyperscaler if you can repeat it", "theme": "One Node at a Time" },
+    { "date": "2026-09-13", "slug": "2026-09-13-governance-before-compute", "title": "Governance sits under the racks", "theme": "Governance Before Compute" }
+  ]
+}
