@@ -1,10 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
+import Entry from "../components/Entry.astro";
 import { getCollection } from "astro:content";
 const posts = (await getCollection("posts")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const [featured, ...rest] = posts;
-const fmt = (d: Date) => d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
-const mins = (body: string) => Math.max(1, Math.round(body.trim().split(/\s+/).length / 220));
+const rest = posts.slice(1);
 ---
 <Base>
   <section class="hero">
@@ -14,20 +13,8 @@ const mins = (body: string) => Math.max(1, Math.round(body.trim().split(/\s+/).l
     <div class="rule"></div>
   </section>
   {posts.length === 0 && <p>The first entry publishes tomorrow morning.</p>}
-  {featured && (
-    <p class="kicker teal">Latest entry</p>
-  )}
-  {posts.map((p, i) => (
-    <a class:list={["entry", { featured: i === 0 }]} href={`/posts/${p.id}/`}>
-      <div class="meta">
-        <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
-        <span>{mins(p.body)} min read</span>
-        {p.data.theme && <span>{p.data.theme}</span>}
-      </div>
-      <h2>{p.data.title}</h2>
-      <p>{p.data.description}</p>
-    </a>
-  ))}
+  {posts[0] && <p class="kicker teal">Latest entry</p>}
+  {posts.map((p, i) => <Entry post={p} featured={i === 0} />)}
   {rest.length > 0 && (
     <p class="after">
       {posts.length} entries in the first week. <a href="/archive/">Browse the archive</a>, or read <a href="/theory/">the AILT constructs</a>.
