@@ -1,0 +1,52 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+const posts = await getCollection("posts");
+const byTheme = Object.fromEntries(posts.map((p) => [p.data.theme, p]));
+const core = [
+  { name: "Inclusive Adaptive Capacity", claim: "An organization's ability to adapt is bounded by how widely it includes voices before adapting.", field: "The clerk who knows why the Tuesday clinic is empty at 2 p.m. is in the design meeting, not quoted on a slide after the decision is already made." },
+  { name: "Participatory Sensemaking", claim: "Meaning is made collectively. Decisions made with the room hold longer than decisions made for it.", field: "A tribal council that names the problem in its own language will still be living with the answer after the consultant has gone home." },
+  { name: "Equity-Centered Flexibility", claim: "Flexibility that does not center equity redistributes advantage to whoever was already ahead.", field: "A model that fine-tunes on whoever showed up with broadband is not adaptive. It is a new way of sorting the same people to the back of the line." },
+  { name: "Psychological Safety as Mediator", claim: "Safety is the channel the other three constructs travel through, not the destination.", field: "If a nurse cannot say the model is wrong about a patient without risking her job, Inclusive Adaptive Capacity is a poster on the wall." },
+];
+const ext = [
+  { name: "Sovereignty Tension", claim: "The pull between controlling your own infrastructure and moving at the speed of borrowed infrastructure.", field: "The default cloud looks fast until you need to change it, and the only person who can change it does not live here." },
+  { name: "Cost of Consistency", claim: "Every rule an organization refuses to bend has a price. Leadership is knowing the bill before paying it.", field: "We keep PHI on the node even when a vendor offers a cheaper, easier path off of it. The bill for that rule is time. The bill for breaking it is the community." },
+];
+---
+<Base title="AILT" description="Adaptive Inclusive Leadership Theory: six constructs that govern how sovereign AI is built and who it is built with.">
+  <p class="kicker">Layer 1</p>
+  <h1 class="page-title">Adaptive Inclusive Leadership Theory</h1>
+  <p class="lede">AILT is the governance layer of Sovereign Shield. Developed through doctoral research in Strategic Leadership. Practiced on the shop floor of a node, not only in a seminar.</p>
+  <div class="rule"></div>
+  <div class="prose">
+    <p>The reader who has never heard of AILT needs one sentence. Organizations adapt only as far as they include, and they include only as far as people can speak without being punished for it. Everything else in the framework is that sentence under load.</p>
+    <p>Four core constructs. Two extensions written when the rooms started containing GPUs as well as people. The extensions are The Sovereign Stack: how AILT behaves when the decision is whether to own the infrastructure or rent it.</p>
+  </div>
+  <h2 class="section-title">Core constructs</h2>
+  <ol class="constructs">
+    {core.map((c, i) => (
+      <li class="card">
+        <div class="card-top"><span class="num">{String(i + 1).padStart(2, "0")}</span><span class="kind">Core</span></div>
+        <h3>{c.name}</h3>
+        <p>{c.claim}</p>
+        <p class="field">{c.field}</p>
+        {byTheme[c.name] && <a href={`/posts/${byTheme[c.name].id}/`}>Read the entry</a>}
+      </li>
+    ))}
+  </ol>
+  <h2 class="section-title">The Sovereign Stack extensions</h2>
+  <p class="muted">Added July 2026, when the theory had to govern tribal energy, compute, and intelligence decisions, not only meetings.</p>
+  <ol class="constructs" start="5">
+    {ext.map((c, i) => (
+      <li class="card">
+        <div class="card-top"><span class="num">{String(i + 5).padStart(2, "0")}</span><span class="kind muted">Extension</span></div>
+        <h3>{c.name}</h3>
+        <p>{c.claim}</p>
+        <p class="field">{c.field}</p>
+        {byTheme[c.name] && <a href={`/posts/${byTheme[c.name].id}/`}>Read the entry</a>}
+      </li>
+    ))}
+  </ol>
+  <p class="after">The productized book, course, and tools live at <a href="https://ailt-leadership.vercel.app">ailt-leadership.vercel.app</a>. The framework stays here, as the thing the racks have to answer to.</p>
+</Base>

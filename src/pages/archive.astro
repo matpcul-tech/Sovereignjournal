@@ -1,0 +1,28 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+const posts = (await getCollection("posts")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const tags = [...new Set(posts.flatMap((p) => p.data.tags))].sort();
+const fmt = (d: Date) => d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+const mins = (body: string) => Math.max(1, Math.round(body.trim().split(/\s+/).length / 220));
+---
+<Base title="Archive" description="Every entry in The Sovereign Journal, by date, theme, and tag.">
+  <p class="kicker">Ledger</p>
+  <h1 class="page-title">Archive</h1>
+  <p class="lede">Every entry, newest first. Filter by tag or search from the header.</p>
+  <div class="chips">
+    <a class="chip on" href="/archive/">All</a>
+    {tags.map((t) => <a class="chip" href={`/tag/${t}/`}>{t}</a>)}
+  </div>
+  {posts.map((p) => (
+    <a class="entry" href={`/posts/${p.id}/`}>
+      <div class="meta">
+        <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
+        <span>{mins(p.body)} min read</span>
+        {p.data.theme && <span>{p.data.theme}</span>}
+      </div>
+      <h2>{p.data.title}</h2>
+      <p>{p.data.description}</p>
+    </a>
+  ))}
+</Base>

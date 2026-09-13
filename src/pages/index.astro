@@ -2,20 +2,35 @@
 import Base from "../layouts/Base.astro";
 import { getCollection } from "astro:content";
 const posts = (await getCollection("posts")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const [featured, ...rest] = posts;
 const fmt = (d: Date) => d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+const mins = (body: string) => Math.max(1, Math.round(body.trim().split(/\s+/).length / 220));
 ---
 <Base>
   <section class="hero">
+    <p class="kicker">Vol. 1 · September 2026 · Ada, Oklahoma</p>
     <h1>Building the next hyperscaler one node at a time.</h1>
     <p>A daily journal on sovereign AI infrastructure for nations and communities, and the leadership theory underneath it. Written from Ada, Oklahoma.</p>
     <div class="rule"></div>
   </section>
   {posts.length === 0 && <p>The first entry publishes tomorrow morning.</p>}
-  {posts.map((p) => (
-    <a class="entry" href={`/posts/${p.id}/`}>
-      <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
+  {featured && (
+    <p class="kicker teal">Latest entry</p>
+  )}
+  {posts.map((p, i) => (
+    <a class:list={["entry", { featured: i === 0 }]} href={`/posts/${p.id}/`}>
+      <div class="meta">
+        <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
+        <span>{mins(p.body)} min read</span>
+        {p.data.theme && <span>{p.data.theme}</span>}
+      </div>
       <h2>{p.data.title}</h2>
       <p>{p.data.description}</p>
     </a>
   ))}
+  {rest.length > 0 && (
+    <p class="after">
+      {posts.length} entries in the first week. <a href="/archive/">Browse the archive</a>, or read <a href="/theory/">the AILT constructs</a>.
+    </p>
+  )}
 </Base>

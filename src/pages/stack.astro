@@ -1,0 +1,46 @@
+---
+import Base from "../layouts/Base.astro";
+const layers = [
+  { kicker: "Layer 1", title: "Governance", body: "Adaptive Inclusive Leadership Theory. Who is in the room when the system changes, how meaning is made, and what a community is allowed to refuse. Without this layer a node is a rack someone else can repossess." },
+  { kicker: "Layer 2", title: "Infrastructure", body: "A closed-loop node. Native-owned waste-to-energy on one side of the wall. Compute sized to what that energy actually produces. Absorption cooling from thermal exhaust. Distillation that returns potable water. Keys local. Audit logs that append and do not rewrite. PHI that never leaves the node." },
+  { kicker: "Layer 3", title: "Product", body: "The same architecture, pointed at a different community problem. Health, caregiving, language, longevity, leadership practice. A product that cannot say who holds the keys is not ready, no matter how the evals look." },
+];
+const products = [
+  { name: "Sovereign Health OS", note: "Clinic-side intelligence that stays with the clinic." },
+  { name: "CareIQ / CareCircle", note: "The family caregiving load, designed as a system, not a feed." },
+  { name: "Chikasha AI OS", note: "Language as a first-class problem, not a localization pass." },
+  { name: "LongevityIQ", note: "Prevention for the next family, run from Ada." },
+  { name: "AILT Leadership OS", note: "The practice tools for the theory. Licensed out. The framework stays." },
+];
+---
+<Base title="The Stack" description="Three layers: Adaptive Inclusive Leadership Theory, sovereign infrastructure nodes, and products for sovereign and rural communities.">
+  <p class="kicker">Architecture</p>
+  <h1 class="page-title">Three layers. One node you can stand next to.</h1>
+  <p class="lede">Sovereign Shield Technologies is the sovereign hyperscaler for nations and communities. The stack is the reason that sentence is an operating claim, not a slogan.</p>
+  <div class="rule"></div>
+  <ol class="constructs">
+    {layers.map((layer, i) => (
+      <li class="card">
+        <div class="card-top"><span class="num">{String(i + 1).padStart(2, "0")}</span><span class="kind">{layer.kicker}</span></div>
+        <h3>{layer.title}</h3>
+        <p class="field">{layer.body}</p>
+      </li>
+    ))}
+  </ol>
+  <h2 class="section-title">The closed loop</h2>
+  <div class="prose">
+    <p>A campus that buys power, water, and cooling on the open market is someone else's hyperscaler with a new sign. A node that makes those three from the waste a community already produces is a different object. The compute load is a consequence of the energy, not the other way around.</p>
+    <p>Data follows the same loop. Raw PHI never leaves. Federated learning can move what a model learned, not what a patient said. The Sovereign Health LLM is trained on 41,000+ pairs, HIPAA-aligned, processed so the identifier never has to travel. Each node becomes the most knowledgeable system in the world about its own community. That is the opposite of a region you pick from a dropdown.</p>
+    <p>There is a cost. You do not look like a campus on day one. You look like a container on land a nation already holds. That is the point. Read <a href="/posts/2026-09-12-one-node-at-a-time/">One container is a hyperscaler if you can repeat it</a>.</p>
+  </div>
+  <h2 class="section-title">Where the architecture shows up</h2>
+  <ul class="product-list">
+    {products.map((p) => (
+      <li>
+        <strong>{p.name}</strong>
+        <span>{p.note}</span>
+      </li>
+    ))}
+  </ul>
+  <p class="after">Company: <a href="https://www.sovereignshieldtechnologies.com">sovereignshieldtechnologies.com</a>. Filed in Oklahoma. Domiciled in Ada, Chickasaw Nation Territory.</p>
+</Base>
