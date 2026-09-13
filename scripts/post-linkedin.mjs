@@ -24,7 +24,7 @@ if (!fs.existsSync(latestPath) || !fs.existsSync(textPath)) {
 }
 
 const latest = JSON.parse(fs.readFileSync(latestPath, "utf8"));
-const text = fs.readFileSync(textPath, "utf8").trim() + "\n\n" + latest.url;
+const text = fs.readFileSync(textPath, "utf8").trim();
 
 // LinkedIn Posts API requires these characters escaped in commentary.
 const escapeCommentary = (s) => s.replace(/[()<>\[\]{}*_~|@]/g, (c) => "\\" + c);
