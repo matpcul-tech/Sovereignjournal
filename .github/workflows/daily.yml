@@ -33,10 +33,8 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL }}
         run: npm run write
 
-      - name: Render Open Graph cards
-        run: |
-          python3 -m pip install --quiet pillow
-          python3 scripts/og.py
+      - name: Ensure each entry has a photograph
+        run: python3 scripts/og.py
 
       - name: Commit and push (this deploys the blog on Vercel)
         run: |
