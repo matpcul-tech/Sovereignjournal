@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import config from "../../../config.json";
+import Subscribe from "../../components/Subscribe.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -48,6 +49,7 @@ const related = all
         {post.data.tags.map((t) => <a href={`/tag/${t}/`}>{t}</a>)}
       </div>
     )}
+    <Subscribe compact id={`post-email-${post.id}`} />
     {related.length > 0 && (
       <section class="related">
         <h2>Related</h2>

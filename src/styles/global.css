@@ -77,8 +77,21 @@ main { flex: 1; padding: 2.5rem 0 4rem; }
 .back { display: inline-block; margin-bottom: 1.5rem; font-size: 0.9rem; }
 
 footer { border-top: 1px solid var(--line); background: var(--navy-2); }
-footer .wrap { padding: 1.5rem 0; font-size: 0.85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; align-items: flex-start; }
+footer .wrap { padding: 1.5rem 0 1.75rem; font-size: 0.85rem; color: var(--muted); display: block; }
+.foot-bar { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; align-items: flex-start; }
 .foot-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.sub { margin: 2.75rem 0 0; padding: 1.4rem 1.45rem; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+.sub.compact { margin: 1.5rem 0 1.35rem; padding: 1.1rem 1.15rem; }
+footer .sub { margin: 0 0 1.25rem; background: transparent; border: 0; padding: 0; }
+.sub h2 { font-family: var(--serif); font-size: 1.4rem; margin: 0 0 0.35rem; font-weight: 600; color: var(--text); }
+.sub.compact h2, footer .sub h2 { font-size: 1.15rem; }
+.sub p { margin: 0 0 0.9rem; color: var(--muted); font-size: 0.95rem; }
+.sub form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.sub input[type="email"] { flex: 1; min-width: 12rem; height: 2.75rem; padding: 0 0.9rem; background: var(--navy); border: 1px solid var(--line); color: var(--text); border-radius: 6px; font: 400 0.95rem var(--sans); }
+.sub button { height: 2.75rem; padding: 0 1.2rem; background: var(--gold); color: var(--navy); border: 0; border-radius: 6px; font: 500 0.9rem var(--sans); cursor: pointer; }
+.sub button:hover { opacity: 0.92; }
 
 .skip { position: absolute; left: -999px; }
 .skip:focus { left: 1rem; top: 0.75rem; z-index: 80; background: var(--card); color: var(--text); padding: 0.5rem 0.75rem; }

@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import config from "../../config.json";
+import Subscribe from "../components/Subscribe.astro";
 import { getCollection } from "astro:content";
 const { title, description, canonical, ogImage } = Astro.props;
 const pageTitle = title ? `${title} | ${config.siteTitle}` : config.siteTitle;
@@ -21,7 +22,7 @@ const nav = [
   { href: "/archive/", label: "Archive", active: path.startsWith("/archive") || path.startsWith("/tag/") },
   { href: "/theory/", label: "Theory", active: path.startsWith("/theory") },
   { href: "/stack/", label: "Stack", active: path.startsWith("/stack") },
-  { href: "/about/", label: "About", active: path.startsWith("/about") },
+  { href: "/subscribe/", label: "Subscribe", active: path.startsWith("/subscribe") },
 ];
 ---
 <!doctype html>
@@ -85,13 +86,17 @@ const nav = [
     </main>
     <footer>
       <div class="wrap">
-        <span>{config.author}. {config.authorLine}</span>
-        <div class="foot-links">
-          <a href="/archive/">Archive</a>
-          <a href="/theory/">AILT</a>
-          <a href="/about/">About</a>
-          <a href="/privacy/">Privacy</a>
-          <a href="/rss.xml">RSS</a>
+        <Subscribe compact id="footer-email" />
+        <div class="foot-bar">
+          <span>{config.author}. {config.authorLine}</span>
+          <div class="foot-links">
+            <a href="/archive/">Archive</a>
+            <a href="/theory/">AILT</a>
+            <a href="/subscribe/">Subscribe</a>
+            <a href="/about/">About</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/rss.xml">RSS</a>
+          </div>
         </div>
       </div>
     </footer>
