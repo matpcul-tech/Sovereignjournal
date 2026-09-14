@@ -61,6 +61,12 @@ jobs:
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
         run: npm run post:linkedin
 
+      - name: Email subscribers
+        if: env.posted == 'true'
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: npm run post:email
+
       - name: Keep today's LinkedIn text as an artifact
         if: env.posted == 'true'
         uses: actions/upload-artifact@v7

@@ -19,7 +19,7 @@ No database. No server. Cost is the Anthropic API call, roughly $0.10 to $0.30 a
 - Vercel redeploys on every push, which is how each morning's post goes live.
 
 ### Newsletter (Buttondown)
-The site has a subscribe form. It posts to Buttondown. Create a free account at [buttondown.com](https://buttondown.com) with username `sovereignjournal` (or change `buttondownUsername` in `config.json`). In Buttondown, turn on RSS: feed URL `https://www.sovereig.app/rss.xml`. New journal entries then email the list with no extra daily work.
+The site has a subscribe form. It posts to Buttondown (free plan, first 100 subscribers). Do not pay for RSS-to-email. Put `BUTTONDOWN_API_KEY` in Actions secrets. The morning job sends the new entry to the list.
 
 ### 2. GitHub Actions secrets and variables
 Repo Settings > Secrets and variables > Actions.
