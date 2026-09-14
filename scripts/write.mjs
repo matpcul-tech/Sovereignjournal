@@ -113,7 +113,7 @@ tags: [${post.tags.map(yamlStr).join(", ")}]
 
 fs.writeFileSync(path.join(postsDir, `${slug}.md`), frontmatter + "\n" + post.body.trim() + "\n");
 
-const siteUrl = (process.env.SITE_URL || "").replace(/\/$/, "");
+const siteUrl = (process.env.SITE_URL || "https://www.sovereig.app").replace(/\/$/, "");
 const postUrl = `${siteUrl}/posts/${slug}/`;
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, "linkedin.txt"), post.linkedin.trim());

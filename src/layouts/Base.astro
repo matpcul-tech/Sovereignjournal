@@ -4,7 +4,7 @@ import config from "../../config.json";
 import { getCollection } from "astro:content";
 const { title, description, canonical, ogImage } = Astro.props;
 const pageTitle = title ? `${title} | ${config.siteTitle}` : config.siteTitle;
-const site = Astro.site?.toString().replace(/\/$/, "") ?? "https://sovereignjournal.vercel.app";
+const site = Astro.site?.toString().replace(/\/$/, "") ?? "https://www.sovereig.app";
 const og = ogImage || `${site}/og/default.jpg`;
 const searchIndex = (await getCollection("posts"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
