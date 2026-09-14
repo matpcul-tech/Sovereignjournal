@@ -1,0 +1,13 @@
+---
+import Base from "../layouts/Base.astro";
+import Subscribe from "../components/Subscribe.astro";
+const site = Astro.site?.toString().replace(/\/$/, "") ?? "https://www.sovereig.app";
+---
+<Base title="Subscribe" description="Get The Sovereign Journal by email. One message when there is an entry. Nothing else." canonical={`${site}/subscribe/`}>
+  <p class="kicker">The Sovereign Journal</p>
+  <h1 class="page-title">Subscribe</h1>
+  <p class="lede">A daily journal on sovereign AI infrastructure and Adaptive Inclusive Leadership Theory. Written from Ada, Oklahoma. Free.</p>
+  <div class="rule"></div>
+  <Subscribe id="subscribe-email" />
+  <p class="after">Prefer a reader? <a href="/rss.xml">RSS</a> is also here. Same entries. No account.</p>
+</Base>

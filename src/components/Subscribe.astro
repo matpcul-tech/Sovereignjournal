@@ -1,0 +1,18 @@
+---
+import config from "../../config.json";
+const { compact = false, id = "email" } = Astro.props;
+const user = config.buttondownUsername;
+---
+{user && (
+  <section class:list={["sub", { compact }]} id={compact ? undefined : "subscribe"}>
+    {!compact && <p class="kicker">Free</p>}
+    <h2>{compact ? "Get the journal by email" : "Subscribe"}</h2>
+    <p>One email when there is an entry. Nothing else. No pitch. Unsubscribe whenever you want.</p>
+    <form action={`https://buttondown.com/api/emails/embed-subscribe/${user}`} method="post">
+      <label class="sr-only" for={id}>Email</label>
+      <input id={id} type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+      <input type="hidden" name="embed" value="1" />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+)}
