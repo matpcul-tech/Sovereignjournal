@@ -27,7 +27,7 @@ Secrets:
 - `LINKEDIN_AUTHOR_URN` (see section 3)
 
 Variables:
-- `SITE_URL` = your Vercel URL with no trailing slash, for example `https://sovereign-journal.vercel.app`
+- `SITE_URL` = `https://www.sovereig.app`
 - `ANTHROPIC_MODEL` (optional, defaults to `claude-sonnet-4-6`)
 
 Also set `SITE_URL` as an environment variable in the Vercel project so canonical links and RSS use the right host.
