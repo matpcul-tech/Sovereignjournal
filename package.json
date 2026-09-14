@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "write": "node scripts/write.mjs",
     "og": "python3 scripts/og.py",
-    "post:linkedin": "node scripts/post-linkedin.mjs"
+    "post:linkedin": "node scripts/post-linkedin.mjs",
+    "post:email": "node scripts/post-email.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.50.0",
