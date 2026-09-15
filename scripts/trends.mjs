@@ -33,13 +33,15 @@ const FEEDS = [
 ];
 
 function decode(s) {
+  const amp = String.fromCharCode(38);
   return String(s || "")
     .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
-    .replace(/&/g, "&")
-    .replace(/</g, "<")
-    .replace(/>/g, ">")
-    .replace(/"/g, '"')
-    .replace(/&#39;/g, "'")
+    .replace(new RegExp(amp + "amp;", "g"), amp)
+    .replace(new RegExp(amp + "lt;", "g"), "<")
+    .replace(new RegExp(amp + "gt;", "g"), ">")
+    .replace(new RegExp(amp + "quot;", "g"), '"')
+    .replace(new RegExp(amp + "#39;", "g"), "'")
+    .replace(new RegExp(amp + "apos;", "g"), "'")
     .replace(/<[^>]+>/g, "")
     .replace(/\s+/g, " ")
     .trim();
