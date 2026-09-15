@@ -1,15 +1,16 @@
 # The Sovereign Journal
 
-A daily writer for sovereign AI infrastructure and Adaptive Inclusive Leadership Theory. Every morning a GitHub Action reads your research, writes one entry in your voice, commits it, Vercel publishes the blog, and the LinkedIn cut goes out with a link back. Medium is one paste.
+A daily writer for sovereign AI infrastructure and Adaptive Inclusive Leadership Theory. Every morning a GitHub Action reads live headlines, picks the theme that actually matches the news (or the next one in rotation), writes one entry in your voice, commits it, Vercel publishes the blog, LinkedIn gets a cut, and Buttondown emails the list.
 
 No database. No server. Cost is the Anthropic API call, roughly $0.10 to $0.30 a day on Sonnet.
 
 ## How it runs
 
-1. `scripts/write.mjs` picks the next theme from `themes.json`, loads the research files that theme lists from `research/`, and asks Claude for the piece plus a LinkedIn cut. It writes `src/content/posts/YYYY-MM-DD-theme.md`.
-2. The workflow commits and pushes. Vercel deploys the Astro site.
-3. `scripts/post-linkedin.mjs` posts the cut to your LinkedIn profile with the post URL as the article link.
-4. Every post page shows the address to paste into Medium's Import a story tool. Medium sets the canonical link back to your blog.
+1. `scripts/trends.mjs` pulls Google News and Hacker News RSS for sovereign AI, rural health, tribal infrastructure, edge clinical AI, data centers, and FDA/ARPA-H. It scores headlines against `watch` phrases on each theme in `themes.json`.
+2. `scripts/write.mjs` uses that briefing. If a theme is clearly trending and was not used in the last four days, it writes that one. Otherwise it takes the next theme in rotation and still opens on a live headline when one fits. The first sentence is a hook, not a principle.
+3. The workflow commits and pushes. Vercel deploys the Astro site.
+4. `scripts/post-linkedin.mjs` posts the cut to your LinkedIn profile with the post URL as the article link.
+5. `scripts/post-email.mjs` sends the entry to Buttondown subscribers.
 
 ## Setup (about 30 minutes)
 
@@ -28,6 +29,7 @@ Secrets:
 - `ANTHROPIC_API_KEY`
 - `LINKEDIN_ACCESS_TOKEN` (see section 3)
 - `LINKEDIN_AUTHOR_URN` (see section 3)
+- `BUTTONDOWN_API_KEY`
 
 Variables:
 - `SITE_URL` = `https://www.sovereig.app`
@@ -81,7 +83,7 @@ Actions tab > Daily journal > Run workflow. Check the blog, check LinkedIn, past
 - Pause everything: set `"paused": true` in `config.json` and push.
 - Blog only, no LinkedIn: set `"postToLinkedIn": false`.
 - Change the hour: edit the cron in `.github/workflows/daily.yml` (11:00 UTC is 6:00 AM Central during daylight time).
-- Change the order or add themes: edit `themes.json`. `state.json` tracks where the rotation is; set `nextTheme` to 0 to restart it.
+- Change the order or add themes: edit `themes.json`. Add `watch` phrases so news can pull a theme forward. `state.json` tracks where the rotation is; set `nextTheme` to 0 to restart it.
 - Write an extra piece today from your phone: Actions > Run workflow. The script refuses to write twice on the same day unless you run `npm run write -- --force` locally.
 - Fix a post: edit the markdown in `src/content/posts/` and push. Vercel redeploys. LinkedIn does not repost.
 
@@ -90,6 +92,7 @@ Actions tab > Daily journal > Run workflow. Check the blog, check LinkedIn, past
 npm install
 cp .env.example .env   # fill in keys
 export $(cat .env | xargs)
+npm run trends         # see what would be picked
 npm run write
 npm run dev
 ```
