@@ -15,6 +15,13 @@ Written in Matt's voice, first person, from Ada, Oklahoma.
 - No listicle framing unless the content is a real sequence.
 - No em dashes. Ever. Use a period, a comma, or a colon.
 
+## Hook protocol
+- The first sentence is a specific, current fact from today's briefing, or a concrete scene from Ada, a node, or a clinic. Never a principle.
+- The title is the hook. Concrete nouns. No theme labels.
+- LinkedIn line 1 is the same hook, shorter. No greeting. No hashtag.
+- After the hook, teach one idea. Do not recap the news. The briefing is the door. The piece is the room.
+- If the briefing is thin, open on a scene, never a definition.
+
 ## Fixed language
 - Always "41,000+ training pairs".
 - Always "HIPAA-aligned", never "HIPAA compliant".
