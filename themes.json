@@ -1,15 +1,75 @@
 {
-  "note": "The writer walks this list top to bottom, one per day, then starts over. Edit freely. 'research' lists files under research/ to load for that theme.",
+  "note": "The writer walks this list unless today's news scores high on a theme. 'watch' phrases match headlines. 'research' lists files under research/.",
   "themes": [
-    { "slug": "inclusive-adaptive-capacity", "title": "Inclusive Adaptive Capacity", "angle": "Why the leaders who adapt fastest are the ones who widened the circle first", "research": ["ailt-core.md"] },
-    { "slug": "sovereignty-tension", "title": "Sovereignty Tension", "angle": "The pull between controlling your own infrastructure and moving at the speed of borrowed infrastructure", "research": ["ailt-core.md", "sovereign-shield-thesis.md"] },
-    { "slug": "participatory-sensemaking", "title": "Participatory Sensemaking", "angle": "Decisions made with the room hold longer than decisions made for the room", "research": ["ailt-core.md"] },
-    { "slug": "one-node-at-a-time", "title": "One Node at a Time", "angle": "Building the next hyperscaler from a single container on tribal land", "research": ["sovereign-shield-thesis.md"] },
-    { "slug": "cost-of-consistency", "title": "Cost of Consistency", "angle": "Every rule you refuse to bend costs something; know the bill before you pay it", "research": ["ailt-core.md", "sovereign-shield-thesis.md"] },
-    { "slug": "psychological-safety-as-mediator", "title": "Psychological Safety as Mediator", "angle": "Safety is not the goal, it is the channel every other construct travels through", "research": ["ailt-core.md"] },
-    { "slug": "the-data-moat", "title": "The Data Moat Is Local", "angle": "PHI that never leaves the node, and why that is a business model and not just a compliance posture", "research": ["sovereign-shield-thesis.md"] },
-    { "slug": "equity-centered-flexibility", "title": "Equity-Centered Flexibility", "angle": "Flexibility that does not center equity just redistributes advantage to whoever was already ahead", "research": ["ailt-core.md"] },
-    { "slug": "building-from-a-phone", "title": "Building From a Phone", "angle": "What solo building with AI teaches about leadership theory in practice", "research": ["sovereign-shield-thesis.md", "ailt-core.md"] },
-    { "slug": "governance-before-compute", "title": "Governance Before Compute", "angle": "Why the leadership layer sits under the infrastructure layer in the Sovereign Shield architecture", "research": ["ailt-core.md", "sovereign-shield-thesis.md"] }
+    {
+      "slug": "inclusive-adaptive-capacity",
+      "title": "Inclusive Adaptive Capacity",
+      "angle": "Why the leaders who adapt fastest are the ones who widened the circle first",
+      "watch": ["rural hospital", "rural health", "medicaid", "community health", "workforce shortage", "inclusion"],
+      "research": ["ailt-core.md"]
+    },
+    {
+      "slug": "sovereignty-tension",
+      "title": "Sovereignty Tension",
+      "angle": "The pull between controlling your own infrastructure and moving at the speed of borrowed infrastructure",
+      "watch": ["sovereign ai", "data sovereignty", "sovereign cloud", "data localization", "aws sovereign", "borrowed"],
+      "research": ["ailt-core.md", "sovereign-shield-thesis.md"]
+    },
+    {
+      "slug": "participatory-sensemaking",
+      "title": "Participatory Sensemaking",
+      "angle": "Decisions made with the room hold longer than decisions made for the room",
+      "watch": ["tribal council", "consultation", "public comment", "community meeting", "nation to nation"],
+      "research": ["ailt-core.md"]
+    },
+    {
+      "slug": "one-node-at-a-time",
+      "title": "One Node at a Time",
+      "angle": "Building the next hyperscaler from a single container on tribal land",
+      "watch": ["data center", "modular", "edge compute", "tribal energy", "waste to energy", "containerized"],
+      "research": ["sovereign-shield-thesis.md"]
+    },
+    {
+      "slug": "cost-of-consistency",
+      "title": "Cost of Consistency",
+      "angle": "Every rule you refuse to bend costs something; know the bill before you pay it",
+      "watch": ["hipaa", "eu ai act", "compliance", "regulation", "exception", "ai act"],
+      "research": ["ailt-core.md", "sovereign-shield-thesis.md"]
+    },
+    {
+      "slug": "psychological-safety-as-mediator",
+      "title": "Psychological Safety as Mediator",
+      "angle": "Safety is not the goal, it is the channel every other construct travels through",
+      "watch": ["burnout", "clinician", "workforce", "psychological safety", "staffing"],
+      "research": ["ailt-core.md"]
+    },
+    {
+      "slug": "the-data-moat",
+      "title": "The Data Moat Is Local",
+      "angle": "PHI that never leaves the node, and why that is a business model and not just a compliance posture",
+      "watch": ["patient data", "on-prem", "local model", "phi", "hospital gpu", "on premises"],
+      "research": ["sovereign-shield-thesis.md"]
+    },
+    {
+      "slug": "equity-centered-flexibility",
+      "title": "Equity-Centered Flexibility",
+      "angle": "Flexibility that does not center equity just redistributes advantage to whoever was already ahead",
+      "watch": ["health disparity", "underserved", "medicaid cuts", "rural transformation", "equity"],
+      "research": ["ailt-core.md"]
+    },
+    {
+      "slug": "building-from-a-phone",
+      "title": "Building From a Phone",
+      "angle": "What solo building with AI teaches about leadership theory in practice",
+      "watch": ["solo founder", "indie hacker", "small team", "open source", "from a laptop"],
+      "research": ["sovereign-shield-thesis.md", "ailt-core.md"]
+    },
+    {
+      "slug": "governance-before-compute",
+      "title": "Governance Before Compute",
+      "angle": "Why the leadership layer sits under the infrastructure layer in the Sovereign Shield architecture",
+      "watch": ["ai governance", "arpa-h", "fda", "clinical ai", "oversight", "ai policy"],
+      "research": ["ailt-core.md", "sovereign-shield-thesis.md"]
+    }
   ]
 }
