@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "trends": "node scripts/trends.mjs",
     "write": "node scripts/write.mjs",
     "og": "python3 scripts/og.py",
     "post:linkedin": "node scripts/post-linkedin.mjs",
