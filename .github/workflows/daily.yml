@@ -2,8 +2,11 @@ name: Daily journal
 
 on:
   schedule:
-    # 11:00 UTC = 6:00 AM Central (CDT). Adjust for CST in winter if it matters.
-    - cron: "0 11 * * *"
+    # GitHub delays :00 jobs on small repos by hours. Offset minutes, plus a backup.
+    # First fire is 6:23 AM Central during CDT (11:23 UTC). Backup is 8:07 AM CDT.
+    # write.mjs no-ops if today's post already exists, so a double fire is safe.
+    - cron: "23 11 * * *"
+    - cron: "7 13 * * *"
   workflow_dispatch:
 
 permissions:
