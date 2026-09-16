@@ -1,5 +1,5 @@
 {
-  "nextTheme": 5,
+  "nextTheme": 6,
   "written": [
     {
       "date": "2026-09-08",
@@ -50,6 +50,14 @@
       "theme": "Sovereignty Tension",
       "reason": "trending",
       "hook": "Government of Canada welcomes major new investment in sovereign AI infrastructure in Saskatchewan - Yahoo Finance"
+    },
+    {
+      "date": "2026-09-16",
+      "slug": "2026-09-16-psychological-safety-as-mediator",
+      "title": "The channel clinicians would not open in the room",
+      "theme": "Psychological Safety as Mediator",
+      "reason": "rotation",
+      "hook": "At CTA event, federal health officials outline AI ambitions as clinicians debate risks - fiercehealthcare.com"
     }
   ]
 }
