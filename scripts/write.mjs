@@ -96,8 +96,9 @@ Return only a JSON object with these keys and nothing else, no markdown fences:
   "description": "one sentence, under 160 characters, for the blog listing and meta tag",
   "tags": ["three", "to", "five", "lowercase", "tags"],
   "body": "the full piece in markdown, 700 to 1100 words, using ## subheads only if the piece genuinely has sections. No H1. No title repeated at the top.",
-  "linkedin": "a standalone LinkedIn post, under ${config.linkedInMaxChars} characters, plain text, no markdown, no hashtags in the first line, first line is the hook, short paragraphs separated by blank lines, no URL (the article card carries the link), then up to four hashtags on the last line"
-}`;
+  "linkedin": "a standalone LinkedIn post, under ${config.linkedInMaxChars} characters, plain text, no markdown, no hashtags in the first line, first line is the hook, short paragraphs separated by blank lines, no URL (the article card carries the link), then up to four hashtags on the last line",
+  "photo": "one still-photograph scene, under 40 words, no people, no text, no logos. Concrete objects: a clinic, a node, a prairie, a council room, a rack, a lock, a desk. Not a metaphor. Not a title card."
+}` ;
 
 const user = `Today's theme: ${theme.title}
 Angle: ${theme.angle}
@@ -136,7 +137,7 @@ try {
 }
 
 const stripDashes = (s) => String(s).replace(/\u2014|\u2013/g, ", ").replace(/\s+,/g, ",");
-for (const k of ["title", "description", "body", "linkedin"]) post[k] = stripDashes(post[k]);
+for (const k of ["title", "description", "body", "linkedin", "photo"]) post[k] = stripDashes(post[k] || "");
 post.tags = (post.tags || []).map((t) => String(t).toLowerCase().replace(/[^a-z0-9-]/g, ""));
 
 const slug = `${today}-${theme.slug}`;
@@ -150,7 +151,7 @@ const postUrl = `${siteUrl}/posts/${slug}/`;
 fs.writeFileSync(path.join(outDir, "linkedin.txt"), post.linkedin.trim());
 fs.writeFileSync(
   path.join(outDir, "latest.json"),
-  JSON.stringify({ slug, title: post.title, description: post.description, url: postUrl, date: today }, null, 2)
+  JSON.stringify({ slug, title: post.title, description: post.description, url: postUrl, date: today, photo: post.photo || "" }, null, 2)
 );
 
 if (choice.reason === "rotation") {

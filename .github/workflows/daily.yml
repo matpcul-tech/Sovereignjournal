@@ -37,7 +37,9 @@ jobs:
         run: npm run write
 
       - name: Ensure each entry has a photograph
-        run: python3 scripts/og.py
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 scripts/og.py
 
       - name: Commit and push (this deploys the blog on Vercel)
         run: |

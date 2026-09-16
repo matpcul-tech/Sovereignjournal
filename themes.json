@@ -5,71 +5,171 @@
       "slug": "inclusive-adaptive-capacity",
       "title": "Inclusive Adaptive Capacity",
       "angle": "Why the leaders who adapt fastest are the ones who widened the circle first",
-      "watch": ["rural hospital", "rural health", "medicaid", "community health", "workforce shortage", "inclusion"],
-      "research": ["ailt-core.md"]
+      "watch": [
+        "rural hospital",
+        "rural health",
+        "medicaid",
+        "community health",
+        "workforce shortage",
+        "inclusion"
+      ],
+      "research": [
+        "ailt-core.md"
+      ],
+      "photo": "empty rural clinic waiting room, four teal chairs, reception window, afternoon light through blinds"
     },
     {
       "slug": "sovereignty-tension",
       "title": "Sovereignty Tension",
       "angle": "The pull between controlling your own infrastructure and moving at the speed of borrowed infrastructure",
-      "watch": ["sovereign ai", "data sovereignty", "sovereign cloud", "data localization", "aws sovereign", "borrowed"],
-      "research": ["ailt-core.md", "sovereign-shield-thesis.md"]
+      "watch": [
+        "sovereign ai",
+        "data sovereignty",
+        "sovereign cloud",
+        "data localization",
+        "aws sovereign",
+        "borrowed"
+      ],
+      "research": [
+        "ailt-core.md",
+        "sovereign-shield-thesis.md"
+      ],
+      "photo": "heavy padlock and brass keys on a steel container door, prairie dusk, first stars"
     },
     {
       "slug": "participatory-sensemaking",
       "title": "Participatory Sensemaking",
       "angle": "Decisions made with the room hold longer than decisions made for the room",
-      "watch": ["tribal council", "consultation", "public comment", "community meeting", "nation to nation"],
-      "research": ["ailt-core.md"]
+      "watch": [
+        "tribal council",
+        "consultation",
+        "public comment",
+        "community meeting",
+        "nation to nation"
+      ],
+      "research": [
+        "ailt-core.md"
+      ],
+      "photo": "empty wood-paneled council room, oval table, papers, a tribal flag in the corner"
     },
     {
       "slug": "one-node-at-a-time",
       "title": "One Node at a Time",
       "angle": "Building the next hyperscaler from a single container on tribal land",
-      "watch": ["data center", "modular", "edge compute", "tribal energy", "waste to energy", "containerized"],
-      "research": ["sovereign-shield-thesis.md"]
+      "watch": [
+        "data center",
+        "modular",
+        "edge compute",
+        "tribal energy",
+        "waste to energy",
+        "containerized"
+      ],
+      "research": [
+        "sovereign-shield-thesis.md"
+      ],
+      "photo": "single dark modular compute container on a gravel pad in an Oklahoma field at sunset"
     },
     {
       "slug": "cost-of-consistency",
       "title": "Cost of Consistency",
       "angle": "Every rule you refuse to bend costs something; know the bill before you pay it",
-      "watch": ["hipaa", "eu ai act", "compliance", "regulation", "exception", "ai act"],
-      "research": ["ailt-core.md", "sovereign-shield-thesis.md"]
+      "watch": [
+        "hipaa",
+        "eu ai act",
+        "compliance",
+        "regulation",
+        "exception",
+        "ai act"
+      ],
+      "research": [
+        "ailt-core.md",
+        "sovereign-shield-thesis.md"
+      ],
+      "photo": "locked gray records cabinet and a rubber stamp on a metal desk in a clinic back room"
     },
     {
       "slug": "psychological-safety-as-mediator",
       "title": "Psychological Safety as Mediator",
       "angle": "Safety is not the goal, it is the channel every other construct travels through",
-      "watch": ["burnout", "clinician", "workforce", "psychological safety", "staffing"],
-      "research": ["ailt-core.md"]
+      "watch": [
+        "burnout",
+        "clinician",
+        "workforce",
+        "psychological safety",
+        "staffing"
+      ],
+      "research": [
+        "ailt-core.md"
+      ],
+      "photo": "empty hospital conference room, one chair pulled back, light under a closed door"
     },
     {
       "slug": "the-data-moat",
       "title": "The Data Moat Is Local",
       "angle": "PHI that never leaves the node, and why that is a business model and not just a compliance posture",
-      "watch": ["patient data", "on-prem", "local model", "phi", "hospital gpu", "on premises"],
-      "research": ["sovereign-shield-thesis.md"]
+      "watch": [
+        "patient data",
+        "on-prem",
+        "local model",
+        "phi",
+        "hospital gpu",
+        "on premises"
+      ],
+      "research": [
+        "sovereign-shield-thesis.md"
+      ],
+      "photo": "closed lockbox on a pallet in front of a humming server rack inside a container"
     },
     {
       "slug": "equity-centered-flexibility",
       "title": "Equity-Centered Flexibility",
       "angle": "Flexibility that does not center equity just redistributes advantage to whoever was already ahead",
-      "watch": ["health disparity", "underserved", "medicaid cuts", "rural transformation", "equity"],
-      "research": ["ailt-core.md"]
+      "watch": [
+        "health disparity",
+        "underserved",
+        "medicaid cuts",
+        "rural transformation",
+        "equity"
+      ],
+      "research": [
+        "ailt-core.md"
+      ],
+      "photo": "empty rural hospital hallway, a gurney against the wall, uneven fluorescent light"
     },
     {
       "slug": "building-from-a-phone",
       "title": "Building From a Phone",
       "angle": "What solo building with AI teaches about leadership theory in practice",
-      "watch": ["solo founder", "indie hacker", "small team", "open source", "from a laptop"],
-      "research": ["sovereign-shield-thesis.md", "ailt-core.md"]
+      "watch": [
+        "solo founder",
+        "indie hacker",
+        "small team",
+        "open source",
+        "from a laptop"
+      ],
+      "research": [
+        "sovereign-shield-thesis.md",
+        "ailt-core.md"
+      ],
+      "photo": "a phone and a notebook on a kitchen table at night, dark prairie outside the window"
     },
     {
       "slug": "governance-before-compute",
       "title": "Governance Before Compute",
       "angle": "Why the leadership layer sits under the infrastructure layer in the Sovereign Shield architecture",
-      "watch": ["ai governance", "arpa-h", "fda", "clinical ai", "oversight", "ai policy"],
-      "research": ["ailt-core.md", "sovereign-shield-thesis.md"]
+      "watch": [
+        "ai governance",
+        "arpa-h",
+        "fda",
+        "clinical ai",
+        "oversight",
+        "ai policy"
+      ],
+      "research": [
+        "ailt-core.md",
+        "sovereign-shield-thesis.md"
+      ],
+      "photo": "a worn binder of papers on a wooden pallet in front of dark server racks"
     }
   ]
 }
