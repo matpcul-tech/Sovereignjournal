@@ -1,5 +1,5 @@
 {
-  "nextTheme": 6,
+  "nextTheme": 7,
   "written": [
     {
       "date": "2026-09-08",
@@ -58,6 +58,14 @@
       "theme": "Psychological Safety as Mediator",
       "reason": "rotation",
       "hook": "At CTA event, federal health officials outline AI ambitions as clinicians debate risks - fiercehealthcare.com"
+    },
+    {
+      "date": "2026-09-17",
+      "slug": "2026-09-17-the-data-moat",
+      "title": "The patient record that never crossed a wire",
+      "theme": "The Data Moat Is Local",
+      "reason": "rotation",
+      "hook": "SovAI Launches as The AI Factory Architect to Deliver Sovereign AI Compute at the Speed the Market Demands - Business Wire"
     }
   ]
 }
