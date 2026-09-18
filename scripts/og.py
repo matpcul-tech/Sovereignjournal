@@ -11,6 +11,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import time
 import urllib.parse
 import urllib.request
 from io import BytesIO
@@ -25,6 +26,7 @@ DEFAULT = OUT / "default.jpg"
 LATEST = ROOT / "out" / "latest.json"
 THEMES = ROOT / "themes.json"
 W, H = 1200, 627
+ATTEMPTS = 4  # Pollinations 500s often clear on a retry; back off 2s, 4s, 8s between tries
 STYLE = (
     "photoreal cinematic still photograph, 35mm film, no people, no faces, "
     "no text, no logos, no watermarks, editorial, Oklahoma rural light, quiet"
@@ -98,10 +100,24 @@ def fetch(scene: str, seed: int) -> Image.Image | None:
             data = res.read()
         if len(data) < 8000:
             return None
-        return Image.open(BytesIO(data))
+        im = Image.open(BytesIO(data))
+        im.load()
+        return im
     except Exception as err:
         print("fetch failed:", err)
         return None
+
+
+def fetch_with_retries(scene: str, seed: int) -> Image.Image | None:
+    for attempt in range(ATTEMPTS):
+        im = fetch(scene, seed + attempt)
+        if im is not None:
+            return im
+        if attempt < ATTEMPTS - 1:
+            wait = 2 ** (attempt + 1)
+            print(f"retrying in {wait}s ({attempt + 2}/{ATTEMPTS})")
+            time.sleep(wait)
+    return None
 
 
 def main() -> None:
@@ -117,7 +133,7 @@ def main() -> None:
         scene = load_scene(path.stem)
         seed = int(hashlib.sha256(path.stem.encode()).hexdigest()[:8], 16)
         print("make", dest.name, "—", scene)
-        im = fetch(scene, seed)
+        im = fetch_with_retries(scene, seed)
         if im is None:
             dest.write_bytes(DEFAULT.read_bytes())
             print("default", dest.name)
