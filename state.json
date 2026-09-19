@@ -1,5 +1,5 @@
 {
-  "nextTheme": 7,
+  "nextTheme": 8,
   "written": [
     {
       "date": "2026-09-08",
@@ -73,6 +73,14 @@
       "title": "Bloomberg noticed the playbook tribal nations wrote first",
       "theme": "One Node at a Time",
       "reason": "trending",
+      "hook": "AI Data Center Deals on Tribal Lands Are Writing a New Playbook - Bloomberg Law News"
+    },
+    {
+      "date": "2026-09-19",
+      "slug": "2026-09-19-equity-centered-flexibility",
+      "title": "Flexibility without a floor just moves the ceiling",
+      "theme": "Equity-Centered Flexibility",
+      "reason": "rotation",
       "hook": "AI Data Center Deals on Tribal Lands Are Writing a New Playbook - Bloomberg Law News"
     }
   ]
