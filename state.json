@@ -1,5 +1,5 @@
 {
-  "nextTheme": 8,
+  "nextTheme": 9,
   "written": [
     {
       "date": "2026-09-08",
@@ -82,6 +82,14 @@
       "theme": "Equity-Centered Flexibility",
       "reason": "rotation",
       "hook": "AI Data Center Deals on Tribal Lands Are Writing a New Playbook - Bloomberg Law News"
+    },
+    {
+      "date": "2026-09-20",
+      "slug": "2026-09-20-building-from-a-phone",
+      "title": "Seventeen products built from a phone in Ada",
+      "theme": "Building From a Phone",
+      "reason": "rotation",
+      "hook": "An open source roguelike adventure through dungeons"
     }
   ]
 }
