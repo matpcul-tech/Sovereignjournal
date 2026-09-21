@@ -1,5 +1,5 @@
 {
-  "nextTheme": 9,
+  "nextTheme": 0,
   "written": [
     {
       "date": "2026-09-08",
@@ -90,6 +90,14 @@
       "theme": "Building From a Phone",
       "reason": "rotation",
       "hook": "An open source roguelike adventure through dungeons"
+    },
+    {
+      "date": "2026-09-21",
+      "slug": "2026-09-21-governance-before-compute",
+      "title": "The layer under the racks that ARPA-H cannot buy",
+      "theme": "Governance Before Compute",
+      "reason": "rotation",
+      "hook": "ARPA-H to invest $62 million to develop FDA-authorized AI to help treat heart failure - STAT"
     }
   ]
 }
