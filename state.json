@@ -1,5 +1,5 @@
 {
-  "nextTheme": 0,
+  "nextTheme": 1,
   "written": [
     {
       "date": "2026-09-08",
@@ -98,6 +98,14 @@
       "theme": "Governance Before Compute",
       "reason": "rotation",
       "hook": "ARPA-H to invest $62 million to develop FDA-authorized AI to help treat heart failure - STAT"
+    },
+    {
+      "date": "2026-09-22",
+      "slug": "2026-09-22-inclusive-adaptive-capacity",
+      "title": "The circle you skipped is why the system stalled",
+      "theme": "Inclusive Adaptive Capacity",
+      "reason": "rotation",
+      "hook": "Rural Evaluation and Analytics for Community Health: AI Platform Helps Identify Solutions | Newswise - Newswise"
     }
   ]
 }
