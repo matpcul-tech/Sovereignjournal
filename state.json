@@ -1,5 +1,5 @@
 {
-  "nextTheme": 2,
+  "nextTheme": 3,
   "written": [
     {
       "date": "2026-09-08",
@@ -130,6 +130,14 @@
       "theme": "Sovereignty Tension",
       "reason": "rotation",
       "hook": "Counting (on) Indigenous Peoples: Data Sovereignty in the Age of AI - un.org"
+    },
+    {
+      "date": "2026-09-26",
+      "slug": "2026-09-26-participatory-sensemaking",
+      "title": "The room decided before you walked in",
+      "theme": "Participatory Sensemaking",
+      "reason": "rotation",
+      "hook": ""
     }
   ]
 }
