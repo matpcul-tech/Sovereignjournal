@@ -1,5 +1,5 @@
 {
-  "nextTheme": 3,
+  "nextTheme": 4,
   "written": [
     {
       "date": "2026-09-08",
@@ -138,6 +138,14 @@
       "theme": "Participatory Sensemaking",
       "reason": "rotation",
       "hook": ""
+    },
+    {
+      "date": "2026-09-27",
+      "slug": "2026-09-27-one-node-at-a-time",
+      "title": "The container is the first brick in a hyperscaler",
+      "theme": "One Node at a Time",
+      "reason": "rotation",
+      "hook": "Interior Enters into Nation’s First-Ever Tribal Energy Agreement | U.S. Department of the Interior - U.S. Department of the Interior (.gov)"
     }
   ]
 }
