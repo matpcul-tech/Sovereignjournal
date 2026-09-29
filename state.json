@@ -1,5 +1,5 @@
 {
-  "nextTheme": 5,
+  "nextTheme": 6,
   "written": [
     {
       "date": "2026-09-08",
@@ -154,6 +154,14 @@
       "theme": "Cost of Consistency",
       "reason": "rotation",
       "hook": "California Seeks to Implement AI Guardrails for Mental Health Treatment - The HIPAA Journal"
+    },
+    {
+      "date": "2026-09-29",
+      "slug": "2026-09-29-psychological-safety-as-mediator",
+      "title": "Safety is not the room. It is the door everyone uses.",
+      "theme": "Psychological Safety as Mediator",
+      "reason": "rotation",
+      "hook": "Congress takes up AI chatbot safety, addressing AMA concerns; corporate giants eye billions in rural health transformation funds; Queens pharmacy owner gets 5 years in $24.4M Medicare fraud – Morning Medical Update - Medical Economics"
     }
   ]
 }
