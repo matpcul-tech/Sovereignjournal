@@ -1,5 +1,5 @@
 {
-  "nextTheme": 6,
+  "nextTheme": 7,
   "written": [
     {
       "date": "2026-09-08",
@@ -162,6 +162,14 @@
       "theme": "Psychological Safety as Mediator",
       "reason": "rotation",
       "hook": "Congress takes up AI chatbot safety, addressing AMA concerns; corporate giants eye billions in rural health transformation funds; Queens pharmacy owner gets 5 years in $24.4M Medicare fraud – Morning Medical Update - Medical Economics"
+    },
+    {
+      "date": "2026-09-30",
+      "slug": "2026-09-30-the-data-moat",
+      "title": "The node that holds the keys is the business",
+      "theme": "The Data Moat Is Local",
+      "reason": "rotation",
+      "hook": "FDA clears AI tool for detecting undiagnosed heart valve disease in ECGs - Cardiovascular Business"
     }
   ]
 }
