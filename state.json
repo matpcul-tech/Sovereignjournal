@@ -1,5 +1,5 @@
 {
-  "nextTheme": 7,
+  "nextTheme": 8,
   "written": [
     {
       "date": "2026-09-08",
@@ -170,6 +170,14 @@
       "theme": "The Data Moat Is Local",
       "reason": "rotation",
       "hook": "FDA clears AI tool for detecting undiagnosed heart valve disease in ECGs - Cardiovascular Business"
+    },
+    {
+      "date": "2026-10-01",
+      "slug": "2026-10-01-equity-centered-flexibility",
+      "title": "Flexible hours did not fix the night-shift clerk",
+      "theme": "Equity-Centered Flexibility",
+      "reason": "rotation",
+      "hook": "Senate Democrats block House-passed data center bill aimed at addressing energy costs - cbsnews.com"
     }
   ]
 }
