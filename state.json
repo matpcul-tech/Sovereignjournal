@@ -186,6 +186,14 @@
       "theme": "Sovereignty Tension",
       "reason": "trending",
       "hook": "Palantir and Armada Partner to Accelerate Sovereign AI Infrastructure - Yahoo Finance"
+    },
+    {
+      "date": "2026-10-03",
+      "slug": "2026-10-03-governance-before-compute",
+      "title": "The governance layer is not a formality",
+      "theme": "Governance Before Compute",
+      "reason": "trending",
+      "hook": "Anthropic joins ARPA-H clinical AI moonshot, will hold closed-door health care event - STAT"
     }
   ]
 }
