@@ -1,5 +1,5 @@
 {
-  "nextTheme": 8,
+  "nextTheme": 9,
   "written": [
     {
       "date": "2026-09-08",
@@ -194,6 +194,14 @@
       "theme": "Governance Before Compute",
       "reason": "trending",
       "hook": "Anthropic joins ARPA-H clinical AI moonshot, will hold closed-door health care event - STAT"
+    },
+    {
+      "date": "2026-10-04",
+      "slug": "2026-10-04-building-from-a-phone",
+      "title": "What a phone builds teaches what a framework misses",
+      "theme": "Building From a Phone",
+      "reason": "rotation",
+      "hook": "Michael Morris on tribal psychology and building AI agents for business students - Columbia Business School"
     }
   ]
 }
