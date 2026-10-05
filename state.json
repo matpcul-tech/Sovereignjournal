@@ -1,5 +1,5 @@
 {
-  "nextTheme": 9,
+  "nextTheme": 0,
   "written": [
     {
       "date": "2026-09-08",
@@ -202,6 +202,14 @@
       "theme": "Building From a Phone",
       "reason": "rotation",
       "hook": "Michael Morris on tribal psychology and building AI agents for business students - Columbia Business School"
+    },
+    {
+      "date": "2026-10-05",
+      "slug": "2026-10-05-governance-before-compute",
+      "title": "Anthropic got the moonshot. Who holds the governance layer?",
+      "theme": "Governance Before Compute",
+      "reason": "rotation",
+      "hook": "Anthropic joins ARPA-H clinical AI moonshot, will hold closed-door health care event - STAT"
     }
   ]
 }
