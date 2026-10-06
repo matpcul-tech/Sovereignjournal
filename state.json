@@ -1,5 +1,5 @@
 {
-  "nextTheme": 0,
+  "nextTheme": 1,
   "written": [
     {
       "date": "2026-09-08",
@@ -210,6 +210,14 @@
       "theme": "Governance Before Compute",
       "reason": "rotation",
       "hook": "Anthropic joins ARPA-H clinical AI moonshot, will hold closed-door health care event - STAT"
+    },
+    {
+      "date": "2026-10-06",
+      "slug": "2026-10-06-inclusive-adaptive-capacity",
+      "title": "Five hospitals got the AI. The question is who was in the room.",
+      "theme": "Inclusive Adaptive Capacity",
+      "reason": "rotation",
+      "hook": "Rural Health Matters: Pros and Cons of Using AI for Health Information - RFD-TV"
     }
   ]
 }
