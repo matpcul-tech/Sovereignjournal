@@ -1,5 +1,5 @@
 {
-  "nextTheme": 1,
+  "nextTheme": 2,
   "written": [
     {
       "date": "2026-09-08",
@@ -234,6 +234,14 @@
       "theme": "One Node at a Time",
       "reason": "trending",
       "hook": "Arizona Tribal Energy Summit highlights growing relationships between tribes and Arizona - Cronkite News"
+    },
+    {
+      "date": "2026-10-09",
+      "slug": "2026-10-09-sovereignty-tension",
+      "title": "The speed you buy is still someone else's map",
+      "theme": "Sovereignty Tension",
+      "reason": "rotation",
+      "hook": "Future-ready AI - Navigating sovereign AI infrastructure choices - NetApp"
     }
   ]
 }
