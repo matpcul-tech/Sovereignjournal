@@ -1,5 +1,5 @@
 {
-  "nextTheme": 3,
+  "nextTheme": 4,
   "written": [
     {
       "date": "2026-09-08",
@@ -250,6 +250,14 @@
       "theme": "Participatory Sensemaking",
       "reason": "rotation",
       "hook": "Computers Cannot Make Decisions"
+    },
+    {
+      "date": "2026-10-11",
+      "slug": "2026-10-11-one-node-at-a-time",
+      "title": "The Department of Energy just handed tribes a blueprint",
+      "theme": "One Node at a Time",
+      "reason": "rotation",
+      "hook": "Harnessing Data Centers for Tribal Economic Development - Department of Energy (.gov)"
     }
   ]
 }
