@@ -290,6 +290,14 @@
       "theme": "Equity-Centered Flexibility",
       "reason": "rotation",
       "hook": "Fact check: What’s true and what’s not in Michigan’s data center debate - Bridge Michigan"
+    },
+    {
+      "date": "2026-10-16",
+      "slug": "2026-10-16-sovereignty-tension",
+      "title": "The keys you keep slow the clock you need",
+      "theme": "Sovereignty Tension",
+      "reason": "trending",
+      "hook": "Why Data Sovereignty Matters More for AI in Government - FedTech Magazine"
     }
   ]
 }
