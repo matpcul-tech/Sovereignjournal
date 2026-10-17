@@ -1,5 +1,5 @@
 {
-  "nextTheme": 8,
+  "nextTheme": 9,
   "written": [
     {
       "date": "2026-09-08",
@@ -298,6 +298,14 @@
       "theme": "Sovereignty Tension",
       "reason": "trending",
       "hook": "Why Data Sovereignty Matters More for AI in Government - FedTech Magazine"
+    },
+    {
+      "date": "2026-10-17",
+      "slug": "2026-10-17-building-from-a-phone",
+      "title": "One phone, one founder, one working AI stack",
+      "theme": "Building From a Phone",
+      "reason": "rotation",
+      "hook": "Sovereign AI: Building national capability while preserving choice - Arm Newsroom"
     }
   ]
 }
