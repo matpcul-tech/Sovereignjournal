@@ -1,5 +1,5 @@
 {
-  "nextTheme": 9,
+  "nextTheme": 0,
   "written": [
     {
       "date": "2026-09-08",
@@ -306,6 +306,14 @@
       "theme": "Building From a Phone",
       "reason": "rotation",
       "hook": "Sovereign AI: Building national capability while preserving choice - Arm Newsroom"
+    },
+    {
+      "date": "2026-10-18",
+      "slug": "2026-10-18-governance-before-compute",
+      "title": "The governance layer has to pour before the concrete does",
+      "theme": "Governance Before Compute",
+      "reason": "rotation",
+      "hook": "Anthropic joins ARPA-H clinical AI moonshot, will hold closed-door health care event - STAT"
     }
   ]
 }
