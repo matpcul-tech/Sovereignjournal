@@ -1,5 +1,5 @@
 {
-  "nextTheme": 0,
+  "nextTheme": 1,
   "written": [
     {
       "date": "2026-09-08",
@@ -314,6 +314,14 @@
       "theme": "Governance Before Compute",
       "reason": "rotation",
       "hook": "Anthropic joins ARPA-H clinical AI moonshot, will hold closed-door health care event - STAT"
+    },
+    {
+      "date": "2026-10-19",
+      "slug": "2026-10-19-inclusive-adaptive-capacity",
+      "title": "The pharmacy fraud case teaches a leadership lesson",
+      "theme": "Inclusive Adaptive Capacity",
+      "reason": "rotation",
+      "hook": "Congress takes up AI chatbot safety, addressing AMA concerns; corporate giants eye billions in rural health transformation funds; Queens pharmacy owner gets 5 years in $24.4M Medicare fraud – Morning Medical Update - Medical Economics"
     }
   ]
 }
