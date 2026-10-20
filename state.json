@@ -1,5 +1,5 @@
 {
-  "nextTheme": 1,
+  "nextTheme": 2,
   "written": [
     {
       "date": "2026-09-08",
@@ -322,6 +322,14 @@
       "theme": "Inclusive Adaptive Capacity",
       "reason": "rotation",
       "hook": "Congress takes up AI chatbot safety, addressing AMA concerns; corporate giants eye billions in rural health transformation funds; Queens pharmacy owner gets 5 years in $24.4M Medicare fraud – Morning Medical Update - Medical Economics"
+    },
+    {
+      "date": "2026-10-20",
+      "slug": "2026-10-20-sovereignty-tension",
+      "title": "The company that owns the rack owns the clock",
+      "theme": "Sovereignty Tension",
+      "reason": "rotation",
+      "hook": "Flexxon backs Tech4Biz to harden sovereign AI infrastructure - Dealroom"
     }
   ]
 }
