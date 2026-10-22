@@ -338,6 +338,14 @@
       "theme": "Participatory Sensemaking",
       "reason": "rotation",
       "hook": "The 1.5°C goal of the Paris Agreement is no longer viable"
+    },
+    {
+      "date": "2026-10-22",
+      "slug": "2026-10-22-one-node-at-a-time",
+      "title": "Developers are circling tribal land. Here is what they miss.",
+      "theme": "One Node at a Time",
+      "reason": "trending",
+      "hook": "Developers eye Native nations, tribal communities for new data center projects - News From The States"
     }
   ]
 }
