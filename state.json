@@ -1,5 +1,5 @@
 {
-  "nextTheme": 3,
+  "nextTheme": 4,
   "written": [
     {
       "date": "2026-09-08",
@@ -346,6 +346,14 @@
       "theme": "One Node at a Time",
       "reason": "trending",
       "hook": "Developers eye Native nations, tribal communities for new data center projects - News From The States"
+    },
+    {
+      "date": "2026-10-23",
+      "slug": "2026-10-23-one-node-at-a-time",
+      "title": "Readers told the industry: ask us first",
+      "theme": "One Node at a Time",
+      "reason": "rotation",
+      "hook": "Readers Oppose Data Centers Near Tribal Communities, Demand Tribal Say - Native News Online"
     }
   ]
 }
