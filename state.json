@@ -1,5 +1,5 @@
 {
-  "nextTheme": 4,
+  "nextTheme": 5,
   "written": [
     {
       "date": "2026-09-08",
@@ -354,6 +354,14 @@
       "theme": "One Node at a Time",
       "reason": "rotation",
       "hook": "Readers Oppose Data Centers Near Tribal Communities, Demand Tribal Say - Native News Online"
+    },
+    {
+      "date": "2026-10-24",
+      "slug": "2026-10-24-cost-of-consistency",
+      "title": "California just showed you the bill for rigid rules",
+      "theme": "Cost of Consistency",
+      "reason": "rotation",
+      "hook": "California cities pull the plug on data centers after state regulations don’t scale up fast enough - CalMatters"
     }
   ]
 }
