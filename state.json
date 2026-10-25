@@ -1,5 +1,5 @@
 {
-  "nextTheme": 5,
+  "nextTheme": 6,
   "written": [
     {
       "date": "2026-09-08",
@@ -362,6 +362,14 @@
       "theme": "Cost of Consistency",
       "reason": "rotation",
       "hook": "California cities pull the plug on data centers after state regulations don’t scale up fast enough - CalMatters"
+    },
+    {
+      "date": "2026-10-25",
+      "slug": "2026-10-25-psychological-safety-as-mediator",
+      "title": "The channel has to be open before the signal travels",
+      "theme": "Psychological Safety as Mediator",
+      "reason": "rotation",
+      "hook": "Sokaogon partners on workforce training for $72M broadband network - Tribal Business News"
     }
   ]
 }
