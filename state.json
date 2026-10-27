@@ -1,5 +1,5 @@
 {
-  "nextTheme": 6,
+  "nextTheme": 7,
   "written": [
     {
       "date": "2026-09-08",
@@ -378,6 +378,14 @@
       "theme": "Sovereignty Tension",
       "reason": "trending",
       "hook": "Sovereign AI Will Decide The Future Of Sovereign Cloud Services - Forrester"
+    },
+    {
+      "date": "2026-10-27",
+      "slug": "2026-10-27-the-data-moat",
+      "title": "The moat is inside the clinic, not around it",
+      "theme": "The Data Moat Is Local",
+      "reason": "rotation",
+      "hook": "DOE expands tribal energy funding to $125M, selects 63 projects - Tribal Business News"
     }
   ]
 }
