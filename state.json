@@ -386,6 +386,14 @@
       "theme": "The Data Moat Is Local",
       "reason": "rotation",
       "hook": "DOE expands tribal energy funding to $125M, selects 63 projects - Tribal Business News"
+    },
+    {
+      "date": "2026-10-28",
+      "slug": "2026-10-28-one-node-at-a-time",
+      "title": "Federal dollars just reached a Juneau utility. A node follows.",
+      "theme": "One Node at a Time",
+      "reason": "trending",
+      "hook": "Juneau-based utility selected for federal tribal energy funding - Juneau Empire"
     }
   ]
 }
