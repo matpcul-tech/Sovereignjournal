@@ -1,0 +1,52 @@
+name: Post an entry to LinkedIn
+
+# For entries committed by hand. Builds the same out/ files write.mjs makes,
+# then runs the normal LinkedIn and email steps.
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Post slug, e.g. 2026-10-31-sovereignty-tension (needs social/<slug>.txt)"
+        required: true
+      email:
+        description: "Also email Buttondown subscribers"
+        type: boolean
+        default: true
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build out/ from the committed entry
+        env:
+          SLUG: ${{ inputs.slug }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          node -e '
+          const fs=require("fs");const slug=process.env.SLUG;
+          const raw=fs.readFileSync(`src/content/posts/${slug}.md`,"utf8");
+          const fm=raw.match(/^---\n([\s\S]*?)\n---/)[1];
+          const get=k=>JSON.parse(fm.match(new RegExp("^"+k+": (.*)$","m"))[1]);
+          const site=(process.env.SITE_URL||"https://www.sovereig.app").replace(/\/$/,"");
+          fs.mkdirSync("out",{recursive:true});
+          fs.writeFileSync("out/linkedin.txt",fs.readFileSync(`social/${slug}.txt`,"utf8"));
+          fs.writeFileSync("out/latest.json",JSON.stringify({slug,title:get("title"),description:get("description"),url:`${site}/posts/${slug}/`,date:slug.slice(0,10)},null,2));
+          '
+          cat out/latest.json
+      - name: Post to LinkedIn
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+        run: npm run post:linkedin
+      - name: Email subscribers
+        if: ${{ inputs.email }}
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: npm run post:email

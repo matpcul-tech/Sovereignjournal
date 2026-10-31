@@ -410,6 +410,14 @@
       "theme": "Building From a Phone",
       "reason": "rotation",
       "hook": ""
+    },
+    {
+      "date": "2026-10-31",
+      "slug": "2026-10-31-sovereignty-tension",
+      "title": "If you don't own the hardware, someone else's lender owns your AI.",
+      "theme": "Sovereignty Tension",
+      "reason": "manual",
+      "hook": "Neocloud financing limits; Musk says 200+ neoclouds face consolidation"
     }
   ]
 }
