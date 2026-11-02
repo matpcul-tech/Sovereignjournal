@@ -426,6 +426,14 @@
       "theme": "Governance Before Compute",
       "reason": "rotation",
       "hook": "How FDA generative AI device oversight may impact providers - Modern Healthcare News"
+    },
+    {
+      "date": "2026-11-02",
+      "slug": "2026-11-02-one-node-at-a-time",
+      "title": "One container, one node, one nation at a time",
+      "theme": "One Node at a Time",
+      "reason": "trending",
+      "hook": "Tribal Nations and Native Communities: Strengthening Tribal Energy Sovereignty - Department of Energy (.gov)"
     }
   ]
 }
