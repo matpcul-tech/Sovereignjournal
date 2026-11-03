@@ -1,5 +1,5 @@
 {
-  "nextTheme": 0,
+  "nextTheme": 1,
   "written": [
     {
       "date": "2026-09-08",
@@ -434,6 +434,14 @@
       "theme": "One Node at a Time",
       "reason": "trending",
       "hook": "Tribal Nations and Native Communities: Strengthening Tribal Energy Sovereignty - Department of Energy (.gov)"
+    },
+    {
+      "date": "2026-11-03",
+      "slug": "2026-11-03-inclusive-adaptive-capacity",
+      "title": "The rural clinic will tell you what the algorithm missed",
+      "theme": "Inclusive Adaptive Capacity",
+      "reason": "rotation",
+      "hook": "Trump officials say AI will help save rural health care. Some leaders in the field don’t believe it - STAT"
     }
   ]
 }
