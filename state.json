@@ -1,5 +1,5 @@
 {
-  "nextTheme": 1,
+  "nextTheme": 2,
   "written": [
     {
       "date": "2026-09-08",
@@ -442,6 +442,14 @@
       "theme": "Inclusive Adaptive Capacity",
       "reason": "rotation",
       "hook": "Trump officials say AI will help save rural health care. Some leaders in the field don’t believe it - STAT"
+    },
+    {
+      "date": "2026-11-04",
+      "slug": "2026-11-04-sovereignty-tension",
+      "title": "Speed is a loan. Sovereignty is a deed.",
+      "theme": "Sovereignty Tension",
+      "reason": "rotation",
+      "hook": "Sovereign AI Infrastructure: Early Validation with Cadence Reality Digital Twin - News and Statistics - IndexBox"
     }
   ]
 }
