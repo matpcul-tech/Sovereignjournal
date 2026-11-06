@@ -1,5 +1,5 @@
 {
-  "nextTheme": 3,
+  "nextTheme": 4,
   "written": [
     {
       "date": "2026-09-08",
@@ -458,6 +458,14 @@
       "theme": "Participatory Sensemaking",
       "reason": "rotation",
       "hook": "Awesome repositories are no longer awesome"
+    },
+    {
+      "date": "2026-11-06",
+      "slug": "2026-11-06-one-node-at-a-time",
+      "title": "One container, one county, one bet on sovereign compute",
+      "theme": "One Node at a Time",
+      "reason": "rotation",
+      "hook": "Announcing the 2026 Tribal Energy Webinar Series - Department of Energy (.gov)"
     }
   ]
 }
