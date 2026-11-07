@@ -1,12 +1,6 @@
 {
-  "nextTheme": 4,
+  "nextTheme": 5,
   "written": [
-    {
-      "date": "2026-09-08",
-      "slug": "2026-09-08-welcome",
-      "title": "Why this journal exists",
-      "theme": "Welcome"
-    },
     {
       "date": "2026-09-09",
       "slug": "2026-09-09-inclusive-adaptive-capacity",
@@ -466,6 +460,14 @@
       "theme": "One Node at a Time",
       "reason": "rotation",
       "hook": "Announcing the 2026 Tribal Energy Webinar Series - Department of Energy (.gov)"
+    },
+    {
+      "date": "2026-11-07",
+      "slug": "2026-11-07-cost-of-consistency",
+      "title": "Voters just handed AI data centers a bill. Know yours first.",
+      "theme": "Cost of Consistency",
+      "reason": "rotation",
+      "hook": "Opposition to AI data centers in the midterms foreshadows tougher regulations ahead - PBS"
     }
   ]
 }
