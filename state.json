@@ -2,12 +2,6 @@
   "nextTheme": 5,
   "written": [
     {
-      "date": "2026-09-09",
-      "slug": "2026-09-09-inclusive-adaptive-capacity",
-      "title": "Widen the circle before you change the system",
-      "theme": "Inclusive Adaptive Capacity"
-    },
-    {
       "date": "2026-09-10",
       "slug": "2026-09-10-sovereignty-tension",
       "title": "Borrowed speed always invoices late",
@@ -468,6 +462,14 @@
       "theme": "Cost of Consistency",
       "reason": "rotation",
       "hook": "Opposition to AI data centers in the midterms foreshadows tougher regulations ahead - PBS"
+    },
+    {
+      "date": "2026-11-08",
+      "slug": "2026-11-08-inclusive-adaptive-capacity",
+      "title": "The circle you drew last year is your ceiling today",
+      "theme": "Inclusive Adaptive Capacity",
+      "reason": "trending",
+      "hook": "Digital Innovations at Community Health Centers: AI Ambient Scribing in Rural Health Care - Commonwealth Fund"
     }
   ]
 }
