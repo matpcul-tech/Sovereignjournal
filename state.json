@@ -1,12 +1,6 @@
 {
-  "nextTheme": 5,
+  "nextTheme": 6,
   "written": [
-    {
-      "date": "2026-09-10",
-      "slug": "2026-09-10-sovereignty-tension",
-      "title": "Borrowed speed always invoices late",
-      "theme": "Sovereignty Tension"
-    },
     {
       "date": "2026-09-11",
       "slug": "2026-09-11-participatory-sensemaking",
@@ -470,6 +464,14 @@
       "theme": "Inclusive Adaptive Capacity",
       "reason": "trending",
       "hook": "Digital Innovations at Community Health Centers: AI Ambient Scribing in Rural Health Care - Commonwealth Fund"
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "2026-11-09-psychological-safety-as-mediator",
+      "title": "The channel has to be open before the signal arrives",
+      "theme": "Psychological Safety as Mediator",
+      "reason": "rotation",
+      "hook": "Advancing Rural Health Through Ambient AI - American Hospital Association"
     }
   ]
 }
