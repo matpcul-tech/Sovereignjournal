@@ -2,12 +2,6 @@
   "nextTheme": 6,
   "written": [
     {
-      "date": "2026-09-11",
-      "slug": "2026-09-11-participatory-sensemaking",
-      "title": "Decisions made with the room hold",
-      "theme": "Participatory Sensemaking"
-    },
-    {
       "date": "2026-09-12",
       "slug": "2026-09-12-one-node-at-a-time",
       "title": "One container is a hyperscaler if you can repeat it",
@@ -472,6 +466,14 @@
       "theme": "Psychological Safety as Mediator",
       "reason": "rotation",
       "hook": "Advancing Rural Health Through Ambient AI - American Hospital Association"
+    },
+    {
+      "date": "2026-11-10",
+      "slug": "2026-11-10-sovereignty-tension",
+      "title": "Korea just bought the tension. Now you have to name it.",
+      "theme": "Sovereignty Tension",
+      "reason": "trending",
+      "hook": "Rebellions, Nvidia to Build Sovereign AI Infrastructure in Korea - THE ELEC, Korea Electronics Industry Media"
     }
   ]
 }
