@@ -1,12 +1,6 @@
 {
-  "nextTheme": 6,
+  "nextTheme": 7,
   "written": [
-    {
-      "date": "2026-09-12",
-      "slug": "2026-09-12-one-node-at-a-time",
-      "title": "One container is a hyperscaler if you can repeat it",
-      "theme": "One Node at a Time"
-    },
     {
       "date": "2026-09-13",
       "slug": "2026-09-13-governance-before-compute",
@@ -474,6 +468,14 @@
       "theme": "Sovereignty Tension",
       "reason": "trending",
       "hook": "Rebellions, Nvidia to Build Sovereign AI Infrastructure in Korea - THE ELEC, Korea Electronics Industry Media"
+    },
+    {
+      "date": "2026-11-11",
+      "slug": "2026-11-11-the-data-moat",
+      "title": "PHI left the building. It didn't have to.",
+      "theme": "The Data Moat Is Local",
+      "reason": "rotation",
+      "hook": "Healthcare Providers Discover Unauthorized PHI Disclosures to AI Tools - The HIPAA Journal"
     }
   ]
 }
