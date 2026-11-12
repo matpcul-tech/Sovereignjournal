@@ -1,12 +1,6 @@
 {
-  "nextTheme": 7,
+  "nextTheme": 8,
   "written": [
-    {
-      "date": "2026-09-13",
-      "slug": "2026-09-13-governance-before-compute",
-      "title": "Governance sits under the racks",
-      "theme": "Governance Before Compute"
-    },
     {
       "date": "2026-09-14",
       "slug": "2026-09-14-cost-of-consistency",
@@ -476,6 +470,14 @@
       "theme": "The Data Moat Is Local",
       "reason": "rotation",
       "hook": "Healthcare Providers Discover Unauthorized PHI Disclosures to AI Tools - The HIPAA Journal"
+    },
+    {
+      "date": "2026-11-12",
+      "slug": "2026-11-12-equity-centered-flexibility",
+      "title": "Faster permitting for who, exactly?",
+      "theme": "Equity-Centered Flexibility",
+      "reason": "rotation",
+      "hook": "Congress’s Permitting Bill Is a ‘Massive Giveaway’ to the AI Data Center Industry, Critics Warn - Time Magazine"
     }
   ]
 }
