@@ -1,12 +1,6 @@
 {
-  "nextTheme": 8,
+  "nextTheme": 9,
   "written": [
-    {
-      "date": "2026-09-14",
-      "slug": "2026-09-14-cost-of-consistency",
-      "title": "Every rule you refuse to bend sends a bill",
-      "theme": "Cost of Consistency"
-    },
     {
       "date": "2026-09-15",
       "slug": "2026-09-15-sovereignty-tension",
@@ -478,6 +472,14 @@
       "theme": "Equity-Centered Flexibility",
       "reason": "rotation",
       "hook": "Congress’s Permitting Bill Is a ‘Massive Giveaway’ to the AI Data Center Industry, Critics Warn - Time Magazine"
+    },
+    {
+      "date": "2026-11-13",
+      "slug": "2026-11-13-building-from-a-phone",
+      "title": "What a phone build teaches you that a team never will",
+      "theme": "Building From a Phone",
+      "reason": "rotation",
+      "hook": "Powering the AI era: Building Resilience Beyond the Data Center - Data Center Frontier"
     }
   ]
 }
