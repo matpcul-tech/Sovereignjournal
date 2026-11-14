@@ -1,14 +1,6 @@
 {
-  "nextTheme": 9,
+  "nextTheme": 0,
   "written": [
-    {
-      "date": "2026-09-15",
-      "slug": "2026-09-15-sovereignty-tension",
-      "title": "Canada just paid for a room you already own",
-      "theme": "Sovereignty Tension",
-      "reason": "trending",
-      "hook": "Government of Canada welcomes major new investment in sovereign AI infrastructure in Saskatchewan - Yahoo Finance"
-    },
     {
       "date": "2026-09-16",
       "slug": "2026-09-16-psychological-safety-as-mediator",
@@ -480,6 +472,14 @@
       "theme": "Building From a Phone",
       "reason": "rotation",
       "hook": "Powering the AI era: Building Resilience Beyond the Data Center - Data Center Frontier"
+    },
+    {
+      "date": "2026-11-14",
+      "slug": "2026-11-14-governance-before-compute",
+      "title": "The governance layer has to be poured before the concrete",
+      "theme": "Governance Before Compute",
+      "reason": "rotation",
+      "hook": "Nebul Adopts NetApp Novus to Power Sovereign AI Infrastructure - HPCwire"
     }
   ]
 }
