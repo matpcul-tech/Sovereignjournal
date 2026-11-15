@@ -2,14 +2,6 @@
   "nextTheme": 0,
   "written": [
     {
-      "date": "2026-09-16",
-      "slug": "2026-09-16-psychological-safety-as-mediator",
-      "title": "The channel clinicians would not open in the room",
-      "theme": "Psychological Safety as Mediator",
-      "reason": "rotation",
-      "hook": "At CTA event, federal health officials outline AI ambitions as clinicians debate risks - fiercehealthcare.com"
-    },
-    {
       "date": "2026-09-17",
       "slug": "2026-09-17-the-data-moat",
       "title": "The patient record that never crossed a wire",
@@ -480,6 +472,14 @@
       "theme": "Governance Before Compute",
       "reason": "rotation",
       "hook": "Nebul Adopts NetApp Novus to Power Sovereign AI Infrastructure - HPCwire"
+    },
+    {
+      "date": "2026-11-15",
+      "slug": "2026-11-15-inclusive-adaptive-capacity",
+      "title": "Wide circles catch the signal first",
+      "theme": "Inclusive Adaptive Capacity",
+      "reason": "trending",
+      "hook": "Digital Innovations at Community Health Centers: AI Ambient Scribing in Rural Health Care - Commonwealth Fund"
     }
   ]
 }
