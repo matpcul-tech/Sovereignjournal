@@ -2,14 +2,6 @@
   "nextTheme": 0,
   "written": [
     {
-      "date": "2026-09-17",
-      "slug": "2026-09-17-the-data-moat",
-      "title": "The patient record that never crossed a wire",
-      "theme": "The Data Moat Is Local",
-      "reason": "rotation",
-      "hook": "SovAI Launches as The AI Factory Architect to Deliver Sovereign AI Compute at the Speed the Market Demands - Business Wire"
-    },
-    {
       "date": "2026-09-18",
       "slug": "2026-09-18-one-node-at-a-time",
       "title": "Bloomberg noticed the playbook tribal nations wrote first",
@@ -480,6 +472,14 @@
       "theme": "Inclusive Adaptive Capacity",
       "reason": "trending",
       "hook": "Digital Innovations at Community Health Centers: AI Ambient Scribing in Rural Health Care - Commonwealth Fund"
+    },
+    {
+      "date": "2026-11-16",
+      "slug": "2026-11-16-one-node-at-a-time",
+      "title": "The Department of Energy just named your land an asset",
+      "theme": "One Node at a Time",
+      "reason": "trending",
+      "hook": "Harnessing Data Centers for Tribal Economic Development - Department of Energy (.gov)"
     }
   ]
 }
