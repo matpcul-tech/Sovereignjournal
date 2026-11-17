@@ -2,14 +2,6 @@
   "nextTheme": 0,
   "written": [
     {
-      "date": "2026-09-18",
-      "slug": "2026-09-18-one-node-at-a-time",
-      "title": "Bloomberg noticed the playbook tribal nations wrote first",
-      "theme": "One Node at a Time",
-      "reason": "trending",
-      "hook": "AI Data Center Deals on Tribal Lands Are Writing a New Playbook - Bloomberg Law News"
-    },
-    {
       "date": "2026-09-19",
       "slug": "2026-09-19-equity-centered-flexibility",
       "title": "Flexibility without a floor just moves the ceiling",
@@ -480,6 +472,14 @@
       "theme": "One Node at a Time",
       "reason": "trending",
       "hook": "Harnessing Data Centers for Tribal Economic Development - Department of Energy (.gov)"
+    },
+    {
+      "date": "2026-11-17",
+      "slug": "2026-11-17-sovereignty-tension",
+      "title": "Google is hosting a sovereign AI summit. Read the invite list.",
+      "theme": "Sovereignty Tension",
+      "reason": "trending",
+      "hook": "Pelico Joins Google Cloud's Sovereign AI Summit to address AI and Data sovereignty in Manufacturing - PR Newswire"
     }
   ]
 }
