@@ -1,14 +1,6 @@
 {
-  "nextTheme": 0,
+  "nextTheme": 1,
   "written": [
-    {
-      "date": "2026-09-19",
-      "slug": "2026-09-19-equity-centered-flexibility",
-      "title": "Flexibility without a floor just moves the ceiling",
-      "theme": "Equity-Centered Flexibility",
-      "reason": "rotation",
-      "hook": "AI Data Center Deals on Tribal Lands Are Writing a New Playbook - Bloomberg Law News"
-    },
     {
       "date": "2026-09-20",
       "slug": "2026-09-20-building-from-a-phone",
@@ -480,6 +472,14 @@
       "theme": "Sovereignty Tension",
       "reason": "trending",
       "hook": "Pelico Joins Google Cloud's Sovereign AI Summit to address AI and Data sovereignty in Manufacturing - PR Newswire"
+    },
+    {
+      "date": "2026-11-18",
+      "slug": "2026-11-18-inclusive-adaptive-capacity",
+      "title": "The scribe heard everything. Who built the room?",
+      "theme": "Inclusive Adaptive Capacity",
+      "reason": "rotation",
+      "hook": "Digital Innovations at Community Health Centers: AI Ambient Scribing in Rural Health Care - Commonwealth Fund"
     }
   ]
 }
