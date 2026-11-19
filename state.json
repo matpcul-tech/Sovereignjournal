@@ -1,14 +1,6 @@
 {
-  "nextTheme": 1,
+  "nextTheme": 2,
   "written": [
-    {
-      "date": "2026-09-20",
-      "slug": "2026-09-20-building-from-a-phone",
-      "title": "Seventeen products built from a phone in Ada",
-      "theme": "Building From a Phone",
-      "reason": "rotation",
-      "hook": "An open source roguelike adventure through dungeons"
-    },
     {
       "date": "2026-09-21",
       "slug": "2026-09-21-governance-before-compute",
@@ -480,6 +472,14 @@
       "theme": "Inclusive Adaptive Capacity",
       "reason": "rotation",
       "hook": "Digital Innovations at Community Health Centers: AI Ambient Scribing in Rural Health Care - Commonwealth Fund"
+    },
+    {
+      "date": "2026-11-19",
+      "slug": "2026-11-19-sovereignty-tension",
+      "title": "Japan just bought the tension. So did you.",
+      "theme": "Sovereignty Tension",
+      "reason": "rotation",
+      "hook": "Mitsubishi Heavy Industries and Sakura Internet sign MoU to establish sovereign AI infrastructure in Japan - Data Center Dynamics"
     }
   ]
 }
