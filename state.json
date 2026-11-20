@@ -1,14 +1,6 @@
 {
-  "nextTheme": 2,
+  "nextTheme": 3,
   "written": [
-    {
-      "date": "2026-09-21",
-      "slug": "2026-09-21-governance-before-compute",
-      "title": "The layer under the racks that ARPA-H cannot buy",
-      "theme": "Governance Before Compute",
-      "reason": "rotation",
-      "hook": "ARPA-H to invest $62 million to develop FDA-authorized AI to help treat heart failure - STAT"
-    },
     {
       "date": "2026-09-22",
       "slug": "2026-09-22-inclusive-adaptive-capacity",
@@ -480,6 +472,14 @@
       "theme": "Sovereignty Tension",
       "reason": "rotation",
       "hook": "Mitsubishi Heavy Industries and Sakura Internet sign MoU to establish sovereign AI infrastructure in Japan - Data Center Dynamics"
+    },
+    {
+      "date": "2026-11-20",
+      "slug": "2026-11-20-participatory-sensemaking",
+      "title": "The room that decided without you already forgot you",
+      "theme": "Participatory Sensemaking",
+      "reason": "rotation",
+      "hook": ""
     }
   ]
 }
