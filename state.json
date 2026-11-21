@@ -1,14 +1,6 @@
 {
-  "nextTheme": 3,
+  "nextTheme": 4,
   "written": [
-    {
-      "date": "2026-09-22",
-      "slug": "2026-09-22-inclusive-adaptive-capacity",
-      "title": "The circle you skipped is why the system stalled",
-      "theme": "Inclusive Adaptive Capacity",
-      "reason": "rotation",
-      "hook": "Rural Evaluation and Analytics for Community Health: AI Platform Helps Identify Solutions | Newswise - Newswise"
-    },
     {
       "date": "2026-09-23",
       "slug": "2026-09-23-sovereignty-tension",
@@ -480,6 +472,14 @@
       "theme": "Participatory Sensemaking",
       "reason": "rotation",
       "hook": ""
+    },
+    {
+      "date": "2026-11-21",
+      "slug": "2026-11-21-one-node-at-a-time",
+      "title": "One container. One tribe. One node at a time.",
+      "theme": "One Node at a Time",
+      "reason": "rotation",
+      "hook": "Announcing the 2026 Tribal Energy Webinar Series - Department of Energy (.gov)"
     }
   ]
 }
