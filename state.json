@@ -1,14 +1,6 @@
 {
-  "nextTheme": 4,
+  "nextTheme": 5,
   "written": [
-    {
-      "date": "2026-09-23",
-      "slug": "2026-09-23-sovereignty-tension",
-      "title": "38 percent sovereign is not sovereign",
-      "theme": "Sovereignty Tension",
-      "reason": "trending",
-      "hook": "ThisWay Global Introduces its Sovereign Blueprint, a Framework Establishing Sovereign AI and Digital Infrastructure Innovation - VMblog"
-    },
     {
       "date": "2026-09-24",
       "slug": "2026-09-24-one-node-at-a-time",
@@ -480,6 +472,14 @@
       "theme": "One Node at a Time",
       "reason": "rotation",
       "hook": "Announcing the 2026 Tribal Energy Webinar Series - Department of Energy (.gov)"
+    },
+    {
+      "date": "2026-11-22",
+      "slug": "2026-11-22-cost-of-consistency",
+      "title": "Every rule you keep has a price tag. Read it first.",
+      "theme": "Cost of Consistency",
+      "reason": "rotation",
+      "hook": "HHS Finalizes HIPAA Privacy Rule Overhaul: Faster Patient Access, Easier Care Coordination, Fewer Burdens - Consumer Financial Services Law Monitor"
     }
   ]
 }
