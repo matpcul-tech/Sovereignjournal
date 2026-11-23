@@ -2,14 +2,6 @@
   "nextTheme": 5,
   "written": [
     {
-      "date": "2026-09-24",
-      "slug": "2026-09-24-one-node-at-a-time",
-      "title": "Arizona tribes want energy. The container is already the answer.",
-      "theme": "One Node at a Time",
-      "reason": "trending",
-      "hook": "Arizona Tribal Energy Summit discusses tribal energy needs and water issues - Cronkite News"
-    },
-    {
       "date": "2026-09-25",
       "slug": "2026-09-25-sovereignty-tension",
       "title": "The UN counted. You still have to hold the keys.",
@@ -480,6 +472,14 @@
       "theme": "Cost of Consistency",
       "reason": "rotation",
       "hook": "HHS Finalizes HIPAA Privacy Rule Overhaul: Faster Patient Access, Easier Care Coordination, Fewer Burdens - Consumer Financial Services Law Monitor"
+    },
+    {
+      "date": "2026-11-23",
+      "slug": "2026-11-23-inclusive-adaptive-capacity",
+      "title": "The clinic adapted. Ask who was in the room.",
+      "theme": "Inclusive Adaptive Capacity",
+      "reason": "trending",
+      "hook": "Digital Innovations at Community Health Centers: AI Ambient Scribing in Rural Health Care - Commonwealth Fund"
     }
   ]
 }
