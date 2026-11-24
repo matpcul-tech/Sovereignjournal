@@ -1,14 +1,6 @@
 {
-  "nextTheme": 5,
+  "nextTheme": 6,
   "written": [
-    {
-      "date": "2026-09-25",
-      "slug": "2026-09-25-sovereignty-tension",
-      "title": "The UN counted. You still have to hold the keys.",
-      "theme": "Sovereignty Tension",
-      "reason": "rotation",
-      "hook": "Counting (on) Indigenous Peoples: Data Sovereignty in the Age of AI - un.org"
-    },
     {
       "date": "2026-09-26",
       "slug": "2026-09-26-participatory-sensemaking",
@@ -480,6 +472,14 @@
       "theme": "Inclusive Adaptive Capacity",
       "reason": "trending",
       "hook": "Digital Innovations at Community Health Centers: AI Ambient Scribing in Rural Health Care - Commonwealth Fund"
+    },
+    {
+      "date": "2026-11-24",
+      "slug": "2026-11-24-psychological-safety-as-mediator",
+      "title": "The ambient mic heard the patient. Did the room feel safe enough to speak?",
+      "theme": "Psychological Safety as Mediator",
+      "reason": "rotation",
+      "hook": "Advancing Rural Health Through Ambient AI - American Hospital Association"
     }
   ]
 }
