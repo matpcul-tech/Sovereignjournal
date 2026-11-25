@@ -1,14 +1,6 @@
 {
-  "nextTheme": 6,
+  "nextTheme": 7,
   "written": [
-    {
-      "date": "2026-09-26",
-      "slug": "2026-09-26-participatory-sensemaking",
-      "title": "The room decided before you walked in",
-      "theme": "Participatory Sensemaking",
-      "reason": "rotation",
-      "hook": ""
-    },
     {
       "date": "2026-09-27",
       "slug": "2026-09-27-one-node-at-a-time",
@@ -480,6 +472,14 @@
       "theme": "Psychological Safety as Mediator",
       "reason": "rotation",
       "hook": "Advancing Rural Health Through Ambient AI - American Hospital Association"
+    },
+    {
+      "date": "2026-11-25",
+      "slug": "2026-11-25-the-data-moat",
+      "title": "The moat is the node, not the contract",
+      "theme": "The Data Moat Is Local",
+      "reason": "rotation",
+      "hook": "Edge AI Market Size, Share, Trends | Growth Forecast [2034] - Fortune Business Insights"
     }
   ]
 }
