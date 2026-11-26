@@ -1,14 +1,6 @@
 {
-  "nextTheme": 7,
+  "nextTheme": 8,
   "written": [
-    {
-      "date": "2026-09-27",
-      "slug": "2026-09-27-one-node-at-a-time",
-      "title": "The container is the first brick in a hyperscaler",
-      "theme": "One Node at a Time",
-      "reason": "rotation",
-      "hook": "Interior Enters into Nation’s First-Ever Tribal Energy Agreement | U.S. Department of the Interior - U.S. Department of the Interior (.gov)"
-    },
     {
       "date": "2026-09-28",
       "slug": "2026-09-28-cost-of-consistency",
@@ -480,6 +472,14 @@
       "theme": "The Data Moat Is Local",
       "reason": "rotation",
       "hook": "Edge AI Market Size, Share, Trends | Growth Forecast [2034] - Fortune Business Insights"
+    },
+    {
+      "date": "2026-11-26",
+      "slug": "2026-11-26-equity-centered-flexibility",
+      "title": "Flexible for whom? The data center map already answers.",
+      "theme": "Equity-Centered Flexibility",
+      "reason": "rotation",
+      "hook": "The Global AI Data Center Debate, Explained - Council on Foreign Relations"
     }
   ]
 }
