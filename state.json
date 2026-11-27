@@ -2,14 +2,6 @@
   "nextTheme": 8,
   "written": [
     {
-      "date": "2026-09-28",
-      "slug": "2026-09-28-cost-of-consistency",
-      "title": "California's AI guardrail bill has a price tag nobody printed",
-      "theme": "Cost of Consistency",
-      "reason": "rotation",
-      "hook": "California Seeks to Implement AI Guardrails for Mental Health Treatment - The HIPAA Journal"
-    },
-    {
       "date": "2026-09-29",
       "slug": "2026-09-29-psychological-safety-as-mediator",
       "title": "Safety is not the room. It is the door everyone uses.",
@@ -480,6 +472,14 @@
       "theme": "Equity-Centered Flexibility",
       "reason": "rotation",
       "hook": "The Global AI Data Center Debate, Explained - Council on Foreign Relations"
+    },
+    {
+      "date": "2026-11-27",
+      "slug": "2026-11-27-sovereignty-tension",
+      "title": "The 1997 crisis left a playbook. Who holds the keys?",
+      "theme": "Sovereignty Tension",
+      "reason": "trending",
+      "hook": "A Sovereign AI Playbook Borrowed from the 1997 Asian Financial Crisis - IT Brief Asia"
     }
   ]
 }
