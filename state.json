@@ -2,14 +2,6 @@
   "nextTheme": 8,
   "written": [
     {
-      "date": "2026-09-29",
-      "slug": "2026-09-29-psychological-safety-as-mediator",
-      "title": "Safety is not the room. It is the door everyone uses.",
-      "theme": "Psychological Safety as Mediator",
-      "reason": "rotation",
-      "hook": "Congress takes up AI chatbot safety, addressing AMA concerns; corporate giants eye billions in rural health transformation funds; Queens pharmacy owner gets 5 years in $24.4M Medicare fraud – Morning Medical Update - Medical Economics"
-    },
-    {
       "date": "2026-09-30",
       "slug": "2026-09-30-the-data-moat",
       "title": "The node that holds the keys is the business",
@@ -480,6 +472,14 @@
       "theme": "Sovereignty Tension",
       "reason": "trending",
       "hook": "A Sovereign AI Playbook Borrowed from the 1997 Asian Financial Crisis - IT Brief Asia"
+    },
+    {
+      "date": "2026-11-28",
+      "slug": "2026-11-28-inclusive-adaptive-capacity",
+      "title": "The clinic adapted. The circle came first.",
+      "theme": "Inclusive Adaptive Capacity",
+      "reason": "trending",
+      "hook": "Digital Innovations at Community Health Centers: AI Ambient Scribing in Rural Health Care - Commonwealth Fund"
     }
   ]
 }
